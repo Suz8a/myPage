@@ -1,11 +1,11 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import ProfileImage from "./components/profile-image";
+import ContactInfo from "./containers/contact-info";
 
 export const Router = () => {
   return (
     <Switch>
-      <Route path="/" component={ProfileImage} />
+      <Route path="/" component={ContactInfo} />
     </Switch>
   );
 };

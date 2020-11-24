@@ -1,17 +1,18 @@
 import { Grid } from "@material-ui/core";
 import React from "react";
 import { MyImage } from "./styled";
-
+import img from "../../assets/addy.jpg";
 function ProfileImage() {
   return (
     <Grid
       container
-      spacing={2}
       direction="column"
       alignItems="flex-start"
       justify="flex-end"
     >
-      <img src="./addy.jpg" alt="profileImage" />
+      <Grid item xs={12}>
+        <MyImage src={img} />
+      </Grid>
     </Grid>
   );
 }
