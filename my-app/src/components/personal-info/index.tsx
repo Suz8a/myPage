@@ -1,24 +1,29 @@
-import { Grid, Typography } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import React from "react";
-import { Divider } from "./styled";
+import { Divider, InfoContainer, LinksContainer } from "./styled";
+import { name, job } from "../../content/section-contact-info";
+import ContactLink from "../../components/contact-link";
+import { contactLinks } from "../../content/section-contact-info";
 
 function PersonalInfo() {
   return (
-    <Grid
-      container
-      spacing={2}
-      direction="column"
-      alignItems="flex-start"
-      justify="flex-end"
-    >
-      <Grid item>
-        <Typography variant="h2">Adriana Ochoa</Typography>
-      </Grid>
+    <InfoContainer>
+      <Typography variant="h2">{name}</Typography>
       <Divider />
-      <Grid item>
-        <Typography variant="h4">Front End Developer</Typography>
-      </Grid>
-    </Grid>
+      <Typography variant="h4">{job}</Typography>
+      <LinksContainer>
+        {contactLinks.map((contactLink, index) => {
+          return (
+            <ContactLink
+              key={index}
+              src={contactLink.imgSource}
+              alt={contactLink.contact}
+              link={contactLink.link}
+            />
+          );
+        })}
+      </LinksContainer>
+    </InfoContainer>
   );
 }
 

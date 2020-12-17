@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
 export const Section = styled.div`
-  width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
