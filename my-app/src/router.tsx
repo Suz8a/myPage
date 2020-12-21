@@ -1,11 +1,11 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import ContactInfo from "./containers/contact-info";
+import MainPage from "./layout/main-page";
 
 export const Router = () => {
   return (
     <Switch>
-      <Route path="/" component={ContactInfo} />
+      <Route path="/" component={MainPage} />
     </Switch>
   );
 };
