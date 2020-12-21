@@ -6,4 +6,5 @@ export const ContactInfoContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 30px;
 `;

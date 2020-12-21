@@ -1,6 +1,12 @@
 import { Typography } from "@material-ui/core";
 import React from "react";
-import { Divider, InfoContainer, LinksContainer } from "./styled";
+import {
+  Divider,
+  InfoContainer,
+  LinksContainer,
+  MainButton,
+  TextContainer,
+} from "./styled";
 import { name, job } from "../../content/section-contact-info";
 import ContactLink from "../../components/contact-link";
 import { contactLinks } from "../../content/section-contact-info";
@@ -8,9 +14,11 @@ import { contactLinks } from "../../content/section-contact-info";
 function PersonalInfo() {
   return (
     <InfoContainer>
-      <Typography variant="h2">{name}</Typography>
-      <Divider />
-      <Typography variant="h4">{job}</Typography>
+      <TextContainer>
+        <Typography variant="h2">{name}</Typography>
+        <Divider />
+        <Typography variant="h4">{job}</Typography>
+      </TextContainer>
       <LinksContainer>
         {contactLinks.map((contactLink, index) => {
           return (
@@ -23,6 +31,9 @@ function PersonalInfo() {
           );
         })}
       </LinksContainer>
+      <MainButton variant="contained" color="primary">
+        <Typography variant="h2">Let's talk</Typography>
+      </MainButton>
     </InfoContainer>
   );
 }
