@@ -1,8 +1,8 @@
 import React from "react";
 import { MyImage } from "./styled";
-import img from "../../assets/addy.jpg";
+import { profilePicture } from "../../content/section-contact-info";
 function ProfileImage() {
-  return <MyImage src={img} />;
+  return <MyImage src={profilePicture} />;
 }
 
 export default ProfileImage;

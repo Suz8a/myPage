@@ -14,4 +14,6 @@ export const InfoContainer = styled.div`
   margin-right: 30px;
 `;
 
-export const LinksContainer = styled.div``;
+export const LinksContainer = styled.div`
+  margin-top: 50px;
+`;
