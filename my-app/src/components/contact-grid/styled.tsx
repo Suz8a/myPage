@@ -8,8 +8,9 @@ export const ContactSectionGrid = styled.div`
   grid-template-rows: repeat(5, 1fr);
   grid-template-areas:
     "top top top top top top"
-    "left name-job name-job profileImage profileImage right"
-    "left contact-link contact-link profileImage profileImage right"
-    "left button button profileImage profileImage right"
+    "left personalInfo personalInfo profileImage profileImage right"
+    "left personalInfo personalInfo profileImage profileImage right"
+    "left personalInfo personalInfo profileImage profileImage right"
     "bottom bottom bottom bottom bottom bottom";
+  background-color: lightblue;
 `;
