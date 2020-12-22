@@ -15,16 +15,17 @@ export const InfoContainer = styled.div`
   margin-right: 30px;
   gap: 70px;
 `;
-
 export const TextContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  grid-area: name-job;
 `;
 
 export const LinksContainer = styled.div`
   width: 100%;
+  grid-area: contact-link;
 `;
 
 export const MainButton = styled(Button)`
@@ -32,4 +33,5 @@ export const MainButton = styled(Button)`
   height: 100px;
   border-radius: 20px;
   text-transform: none;
+  grid-area: button;
 `;
