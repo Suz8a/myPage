@@ -8,23 +8,26 @@ export const Divider = styled.div`
 `;
 
 export const InfoContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  margin-right: 30px;
-  gap: 70px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "name-job"
+    "contact-link"
+    "button";
   grid-area: personalInfo;
+  margin-right: 50px;
 `;
 export const TextContainer = styled.div`
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  grid-area: name-job;
+  margin-bottom: auto;
 `;
 
 export const LinksContainer = styled.div`
   width: 100%;
+  grid-area: contact-link;
+  margin: auto 0;
 `;
 
 export const MainButton = styled(Button)`
@@ -32,4 +35,6 @@ export const MainButton = styled(Button)`
   height: 100px;
   border-radius: 20px;
   text-transform: none;
+  grid-area: button;
+  margin-top: auto;
 `;
