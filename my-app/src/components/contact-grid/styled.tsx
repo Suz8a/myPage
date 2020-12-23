@@ -12,4 +12,5 @@ export const ContactSectionGrid = styled.div`
     "personalInfo personalInfo profileImage profileImage"
     "personalInfo personalInfo profileImage profileImage "
     "bottom bottom bottom bottom  ";
+  transition: linear;
 `;
