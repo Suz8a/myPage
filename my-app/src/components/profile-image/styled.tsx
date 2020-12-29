@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const MyImage = styled.img`
-  width: 445px;
-  height: 445px;
+  width: auto;
+  height: 100%;
   border-radius: 50%;
-  margin: auto;
+  margin: auto 0 auto auto;
   grid-area: profileImage;
 `;

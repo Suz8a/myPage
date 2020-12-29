@@ -9,7 +9,7 @@ export type ContactLinkProps = {
 
 const ContactLink = (props: ContactLinkProps) => {
   return (
-    <a href={props.link} title={props.alt} target="_blank">
+    <a href={props.link} title={props.alt} target="_blank" rel="noreferrer">
       <MyLinkContact src={props.src} alt={props.alt} />
     </a>
   );

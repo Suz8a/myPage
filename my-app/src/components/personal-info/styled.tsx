@@ -5,6 +5,7 @@ export const Divider = styled.div`
   background-color: black;
   width: 100%;
   height: 4px;
+  margin: 15px 0;
 `;
 
 export const InfoContainer = styled.div`
@@ -16,7 +17,6 @@ export const InfoContainer = styled.div`
     "contact-link"
     "button";
   grid-area: personalInfo;
-  margin-right: 50px;
 `;
 export const TextContainer = styled.div`
   width: 100%;
@@ -27,7 +27,7 @@ export const TextContainer = styled.div`
 export const LinksContainer = styled.div`
   width: 100%;
   grid-area: contact-link;
-  margin: auto 0;
+  margin-top: auto;
 `;
 
 export const MainButton = styled(Button)`
@@ -37,4 +37,8 @@ export const MainButton = styled(Button)`
   text-transform: none;
   grid-area: button;
   margin-top: auto;
+
+  @media (max-height: 960px) {
+    height: 90px;
+  }
 `;

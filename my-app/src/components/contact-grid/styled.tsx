@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../theme";
 
 export const ContactSectionGrid = styled.div`
   display: grid;

@@ -5,4 +5,5 @@ export const Circle = styled.img`
   height: 100px;
   background-color: #ffffff;
   border-radius: 50%;
+  background-color: red;
 `;
