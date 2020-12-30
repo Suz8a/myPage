@@ -6,8 +6,8 @@ type SkillCircleProps = {
   alt: string;
 };
 
-const SkillCircle = (props: SkillCircleProps) => {
+function SkillCircle(props: SkillCircleProps) {
   return <Circle src={props.src} alt={props.alt} />;
-};
+}
 
 export default SkillCircle;

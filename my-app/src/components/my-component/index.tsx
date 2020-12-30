@@ -8,8 +8,8 @@ export type MyComponentProps = {
   };
 };
 
-const MyComponent = (props: MyComponentProps) => {
+function MyComponent(props: MyComponentProps) {
   return <div>{props.name}</div>;
-};
+}
 
 export default MyComponent;

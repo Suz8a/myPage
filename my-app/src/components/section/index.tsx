@@ -3,10 +3,11 @@ import { Section } from "./styled";
 
 type MySectionProps = {
   children: ReactNode;
+  className?: string;
 };
 
-function MySection({ children }: MySectionProps) {
-  return <Section>{children}</Section>;
+function MySection({ className, children }: MySectionProps) {
+  return <Section className={className}>{children}</Section>;
 }
 
 export default MySection;

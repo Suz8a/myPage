@@ -12,5 +12,5 @@ export const SkillInfoContainer = styled.div`
 `;
 
 export const MyStyledSection = styled(MySection)`
-  background-color: red;
+  background-color: #f5f9ff;
 `;

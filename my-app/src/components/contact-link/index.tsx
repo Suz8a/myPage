@@ -7,12 +7,12 @@ type ContactLinkProps = {
   link: string;
 };
 
-const ContactLink = (props: ContactLinkProps) => {
+function ContactLink(props: ContactLinkProps) {
   return (
     <a href={props.link} title={props.alt} target="_blank" rel="noreferrer">
       <MyLinkContact src={props.src} alt={props.alt} />
     </a>
   );
-};
+}
 
 export default ContactLink;
