@@ -1,16 +1,19 @@
 import React from "react";
-import MySection from "../../components/section";
 import SectionTitle from "../../components/section-title";
-import { SkillInfoContainer } from "./styled";
+import { SkillInfoContainer, MyStyledSection } from "./styled";
+import { skills } from "../../content/section-skills-info";
+import SkillCircle from "../../components/skill-circle";
 
 function SkillsInfo() {
   return (
-    <MySection>
+    <MyStyledSection>
       <SectionTitle title="Skills" />
       <SkillInfoContainer>
-        <div>holi</div>
+        {skills.map((skill, index) => {
+          return <SkillCircle key={index} src={skill.img} alt={skill.name} />;
+        })}
       </SkillInfoContainer>
-    </MySection>
+    </MyStyledSection>
   );
 }
 
