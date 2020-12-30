@@ -2,13 +2,14 @@ import styled from "styled-components";
 import MySection from "../../components/section";
 
 export const SkillInfoContainer = styled.div`
-  width: 85%;
+  width: 100vw;
   height: 70vh;
-  box-sizing: border-box;
-  margin: 0 auto auto auto;
+  max-width: 1470px;
   display: flex;
   flex-wrap: wrap;
+  margin: 0 auto auto auto;
   justify-content: center;
+  align-items: center;
 `;
 
 export const MyStyledSection = styled(MySection)`
