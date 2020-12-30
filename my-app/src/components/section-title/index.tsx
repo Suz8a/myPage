@@ -1,7 +1,7 @@
 import React from "react";
 import { Title } from "./styled";
 
-export type SectionTitleProps = {
+type SectionTitleProps = {
   title: string;
 };
 

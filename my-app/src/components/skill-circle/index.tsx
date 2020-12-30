@@ -1,7 +1,7 @@
 import React from "react";
 import { Circle } from "./styled";
 
-export type SkillCircleProps = {
+type SkillCircleProps = {
   src: string;
   alt: string;
 };

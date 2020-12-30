@@ -1,7 +1,7 @@
 import React from "react";
 import { MyLinkContact } from "./styled";
 
-export type ContactLinkProps = {
+type ContactLinkProps = {
   src: string;
   alt: string;
   link: string;
