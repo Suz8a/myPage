@@ -10,6 +10,7 @@ export const SkillInfoContainer = styled.div`
   margin: 0 auto auto auto;
   justify-content: center;
   align-items: center;
+  overflow-y: auto;
 `;
 
 export const MyStyledSection = styled(MySection)`
