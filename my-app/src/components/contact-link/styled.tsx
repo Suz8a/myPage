@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { device } from "../../theme";
 
 export const MyLinkContact = styled.img`
   width: 90px;
