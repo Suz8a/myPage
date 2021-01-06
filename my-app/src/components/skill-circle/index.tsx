@@ -1,5 +1,5 @@
 import React from "react";
-import { Circle } from "./styled";
+import { Circle, CircleLabel, Label } from "./styled";
 
 type SkillCircleProps = {
   src: string;
@@ -7,7 +7,12 @@ type SkillCircleProps = {
 };
 
 function SkillCircle(props: SkillCircleProps) {
-  return <Circle src={props.src} alt={props.alt} />;
+  return (
+    <CircleLabel>
+      <Label>{props.alt}</Label>
+      <Circle src={props.src} alt={props.alt} />
+    </CircleLabel>
+  );
 }
 
 export default SkillCircle;
