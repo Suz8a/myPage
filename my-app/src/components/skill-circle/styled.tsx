@@ -7,7 +7,7 @@ export const Circle = styled.img`
   box-shadow: 0px 0px 10px #a8a8a8;
   position: absolute;
   &:hover {
-    opacity: 0.15;
+    opacity: 0.2;
   }
 `;
 
@@ -23,7 +23,7 @@ export const CircleLabel = styled.div`
 export const Label = styled.div`
   width: 100%;
   position: absolute;
-  top: 40%;
+  top: 45%;
   color: #ffffff;
   text-align: center;
   font-weight: 900;
