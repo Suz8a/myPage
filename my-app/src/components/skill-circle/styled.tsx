@@ -10,6 +10,8 @@ export const Circle = styled.img`
   border-radius: 50%;
   box-shadow: 0px 0px 10px #a8a8a8;
   position: absolute;
+  transition: 0.35s;
+  opacity: 1;
   &:hover {
     opacity: 0.2;
   }
