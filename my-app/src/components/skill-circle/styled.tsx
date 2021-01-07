@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+type LabelProps = {
+  text: string;
+};
+
 export const Circle = styled.img`
   width: 200px;
   height: 200px;
@@ -20,10 +24,10 @@ export const CircleLabel = styled.div`
   position: relative;
 `;
 
-export const Label = styled.div`
+export const Label = styled.div<LabelProps>`
   width: 100%;
   position: absolute;
-  top: 45%;
+  top: ${(props) => (props.text.length > 10 ? "35%" : "45%")};
   color: #ffffff;
   text-align: center;
   font-weight: 900;

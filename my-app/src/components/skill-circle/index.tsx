@@ -9,7 +9,7 @@ type SkillCircleProps = {
 function SkillCircle(props: SkillCircleProps) {
   return (
     <CircleLabel>
-      <Label>{props.alt}</Label>
+      <Label text={props.alt}>{props.alt}</Label>
       <Circle src={props.src} alt={props.alt} />
     </CircleLabel>
   );
