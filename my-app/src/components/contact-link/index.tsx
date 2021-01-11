@@ -7,10 +7,10 @@ type ContactLinkProps = {
   link: string;
 };
 
-function ContactLink(props: ContactLinkProps) {
+function ContactLink({ src, alt, link }: ContactLinkProps) {
   return (
-    <a href={props.link} title={props.alt} target="_blank" rel="noreferrer">
-      <MyLinkContact src={props.src} alt={props.alt} />
+    <a href={link} title={alt} target="_blank" rel="noreferrer">
+      <MyLinkContact src={src} alt={alt} />
     </a>
   );
 }

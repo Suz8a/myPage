@@ -4,7 +4,7 @@ import { workExperienceColor } from "../../theme";
 export const Label = styled.div`
   width: 100%;
   height: 0;
-  border-top: 50px solid ${workExperienceColor.workColor};
+  border-top: 50px solid ${workExperienceColor};
   border-right: 50px solid transparent;
 `;
 
@@ -58,7 +58,7 @@ export const InfoContainer = styled.div`
 export const SquarePoint = styled.div`
   width: 70px;
   height: 70px;
-  background-color: ${workExperienceColor.workColor};
+  background-color: ${workExperienceColor};
   border-radius: 25px;
   position: absolute;
   bottom: 0;

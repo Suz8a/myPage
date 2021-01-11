@@ -6,7 +6,7 @@ export const Line = styled.div`
   height: 100%;
   position: absolute;
   left: 50%;
-  background-color: ${workExperienceColor.workColor};
+  background-color: ${workExperienceColor};
 `;
 
 export const LinePointContainer = styled.div`
@@ -18,7 +18,7 @@ export const LinePointContainer = styled.div`
 export const TopCircle = styled.div`
   width: 15px;
   height: 15px;
-  background-color: ${workExperienceColor.workColor};
+  background-color: ${workExperienceColor};
   border-radius: 50%;
   position: absolute;
   top: 0;
@@ -28,7 +28,7 @@ export const TopCircle = styled.div`
 export const BottomCircle = styled.div`
   width: 15px;
   height: 15px;
-  background-color: ${workExperienceColor.workColor};
+  background-color: ${workExperienceColor};
   border-radius: 50%;
   position: absolute;
   bottom: 0;

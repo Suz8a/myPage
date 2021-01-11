@@ -6,11 +6,11 @@ type SkillCircleProps = {
   alt: string;
 };
 
-function SkillCircle(props: SkillCircleProps) {
+function SkillCircle({ src, alt }: SkillCircleProps) {
   return (
     <CircleLabel>
-      <Label text={props.alt}>{props.alt}</Label>
-      <Circle src={props.src} alt={props.alt} />
+      <Label text={alt}>{alt}</Label>
+      <Circle src={src} alt={alt} />
     </CircleLabel>
   );
 }

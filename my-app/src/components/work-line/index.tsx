@@ -1,10 +1,16 @@
 import React from "react";
+import { Line, LinePointContainer, Point } from "./styled";
 
-function WorkLine() {
+type WorkLineProps = {
+  className?: string;
+};
+
+function WorkLine({ className }: WorkLineProps) {
   return (
-    <div>
-      <div></div>
-    </div>
+    <LinePointContainer className={className}>
+      <Line />
+      <Point />
+    </LinePointContainer>
   );
 }
 

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import MySection from "../../components/section";
+import WorkLine from "../../components/work-line";
 
 export const MyStyledSection = styled(MySection)`
   position: relative;
@@ -13,4 +14,11 @@ export const Trapezoid = styled.div`
   left: 0;
   border-top: 100vh solid #ffffff;
   border-right: 20vw solid transparent;
+`;
+
+export const StyledWorkLine = styled(WorkLine)`
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 95%;
 `;

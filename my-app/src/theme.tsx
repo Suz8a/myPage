@@ -36,8 +36,6 @@ export const device = {
   desktopL: `(min-width: ${size.desktop})`,
 };
 
-export const workExperienceColor = {
-  workColor: "#0752BB",
-};
+export const workExperienceColor = "#0752BB";
 
 export default theme;
