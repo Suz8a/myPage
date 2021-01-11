@@ -1,10 +1,10 @@
 import React from "react";
-import { MyStyledSection } from "./styled";
+import { MyStyledSection, Triangle } from "./styled";
 
 function WorkInfo() {
   return (
     <MyStyledSection>
-      <div></div>
+      <Triangle />
     </MyStyledSection>
   );
 }
