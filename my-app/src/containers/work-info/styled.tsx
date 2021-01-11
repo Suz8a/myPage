@@ -6,7 +6,7 @@ export const MyStyledSection = styled(MySection)`
   background-color: #f5f9ff;
 `;
 
-export const Triangle = styled.div`
+export const Trapezoid = styled.div`
   position: absolute;
   width: 40vw;
   top: 0;
