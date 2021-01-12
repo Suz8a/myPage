@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { workExperienceColor } from "../../theme";
 
 export const Line = styled.div`
-  width: 3px;
+  width: 1px;
   height: 100%;
   position: absolute;
   left: 50%;
