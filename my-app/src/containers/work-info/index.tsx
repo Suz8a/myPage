@@ -1,17 +1,29 @@
 import React from "react";
 import WorkEvent from "../../components/work-event";
-import { MyStyledSection, Trapezoid, StyledWorkLine } from "./styled";
+import {
+  MyStyledSection,
+  Trapezoid,
+  StyledWorkLine,
+  EventsContainer,
+} from "./styled";
+import { workExperience } from "../../content/section-work-info";
 
 function WorkInfo() {
   return (
     <MyStyledSection>
       <Trapezoid />
       <StyledWorkLine />
-      <WorkEvent
-        year="2017"
-        job="React front end developer"
-        description="I collaborated in the development of a platform for station data deployment of the Instituto Tecnológico de Culiacán"
-      />
+      <EventsContainer>
+        {workExperience.map((work, index) => (
+          <WorkEvent
+            key={index}
+            year={work.year}
+            job={work.job}
+            description={work.description}
+            moveToBottom={index % 2 !== 0}
+          />
+        ))}
+      </EventsContainer>
     </MyStyledSection>
   );
 }

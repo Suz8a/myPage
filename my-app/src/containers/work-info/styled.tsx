@@ -22,3 +22,10 @@ export const StyledWorkLine = styled(WorkLine)`
   top: 50%;
   width: 95%;
 `;
+
+export const EventsContainer = styled.div`
+  width: 85%;
+  height: 650px;
+  display: flex;
+  justify-content: space-between;
+`;

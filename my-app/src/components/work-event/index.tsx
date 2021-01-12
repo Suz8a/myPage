@@ -14,16 +14,23 @@ import {
 } from "./styled";
 
 type WorkEventProps = {
-  year?: string;
-  job?: string;
-  description?: string;
+  year: string;
+  job: string;
+  description: string;
+  moveToBottom?: boolean;
   className?: string;
 };
 
-function WorkEvent({ className, year, job, description }: WorkEventProps) {
+function WorkEvent({
+  className,
+  year,
+  job,
+  description,
+  moveToBottom,
+}: WorkEventProps) {
   return (
-    <EventContainer>
-      <LineTextContainer>
+    <EventContainer moveToBottom={moveToBottom}>
+      <LineTextContainer moveToBottom={moveToBottom}>
         <LineContainer>
           <EventLine />
         </LineContainer>
@@ -38,7 +45,7 @@ function WorkEvent({ className, year, job, description }: WorkEventProps) {
         </InfoContainer>
       </LineTextContainer>
 
-      <SquarePoint />
+      <SquarePoint moveToBottom={moveToBottom} />
     </EventContainer>
   );
 }

@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import { workExperienceColor } from "../../theme";
 
+type EventProps = {
+  moveToBottom?: boolean;
+};
+
 export const Label = styled.div`
   width: 100%;
   height: 0;
@@ -24,10 +28,12 @@ export const LabelContainer = styled.div`
   position: relative;
 `;
 
-export const EventContainer = styled.div`
+export const EventContainer = styled.div<EventProps>`
   width: 360px;
-  height: 400px;
+  height: 350px;
   position: relative;
+  ${({ moveToBottom }) =>
+    moveToBottom ? "margin-top:auto" : "padding-top: 15px;"}
 `;
 
 export const Title = styled.div`
@@ -55,20 +61,22 @@ export const InfoContainer = styled.div`
   flex-direction: column;
 `;
 
-export const SquarePoint = styled.div`
-  width: 70px;
-  height: 70px;
+export const SquarePoint = styled.div<EventProps>`
+  width: 65px;
+  height: 65px;
   background-color: ${workExperienceColor};
   border-radius: 25px;
   position: absolute;
-  bottom: 0;
+  ${({ moveToBottom }) => (moveToBottom ? "top:0;" : "bottom:0;")}
   left: 0;
 `;
 
-export const LineTextContainer = styled.div`
+export const LineTextContainer = styled.div<EventProps>`
   width: 100%;
-  height: 80%;
+  height: 70%;
   display: flex;
+  ${({ moveToBottom }) =>
+    moveToBottom ? "position:absolute; bottom:0;" : "top:0;"}
 `;
 
 export const LineContainer = styled.div`
