@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import IconCircle from "../../components/icon-circle";
 
 export const ProjectsContainer = styled.div`
   width: 85%;
@@ -6,20 +7,47 @@ export const ProjectsContainer = styled.div`
   background-color: #f5f9ff;
   border-radius: 20px;
   position: relative;
+  display: flex;
+  overflow: hidden;
 `;
 
-export const TopProjectImage = styled.div`
-  width: 580px;
+export const TopProjectImage = styled.img`
+  width: 450px;
   height: auto;
   position: absolute;
-  top: 0;
-  left: 30px;
+  top: -220px;
+  left: 50px;
+  box-shadow: 0px 2px 10px #b3b3b3;
 `;
 
-export const BottomProjectImage = styled.div`
-  width: 580px;
+export const BottomProjectImage = styled.img`
+  width: 600px;
   height: auto;
   position: absolute;
-  bottom: 0;
+  bottom: -100px;
   left: 20%;
+  box-shadow: 0px 2px 10px #b3b3b3;
+`;
+
+export const ProjectsImagesContainer = styled.div`
+  height: 100%;
+  width: 70%;
+  position: relative;
+`;
+
+export const TextIconsContainer = styled.div`
+  height: 100%;
+  width: 30%;
+  background-color: lightgray;
+`;
+
+export const CirclesContainer = styled.div`
+  width: 100%;
+  height: 45%;
+  background-color: lightpink;
+`;
+
+export const StyledIconCircle = styled(IconCircle)`
+  margin: auto 40px auto 0;
+  color: #000000;
 `;
