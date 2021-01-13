@@ -20,6 +20,7 @@ function WorkInfo() {
             year={work.year}
             job={work.job}
             description={work.description}
+            showSquarePoint={true}
             moveToBottom={index % 2 !== 0}
           />
         ))}

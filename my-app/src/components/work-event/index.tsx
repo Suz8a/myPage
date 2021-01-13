@@ -18,6 +18,7 @@ type WorkEventProps = {
   job: string;
   description: string;
   moveToBottom?: boolean;
+  showSquarePoint: boolean;
   className?: string;
 };
 
@@ -27,6 +28,7 @@ function WorkEvent({
   job,
   description,
   moveToBottom,
+  showSquarePoint,
 }: WorkEventProps) {
   return (
     <EventContainer moveToBottom={moveToBottom}>
@@ -44,8 +46,7 @@ function WorkEvent({
           <Description>{description}</Description>
         </InfoContainer>
       </LineTextContainer>
-
-      <SquarePoint moveToBottom={moveToBottom} />
+      {showSquarePoint && <SquarePoint moveToBottom={moveToBottom} />}
     </EventContainer>
   );
 }
