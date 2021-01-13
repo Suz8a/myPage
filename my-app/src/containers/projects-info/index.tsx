@@ -22,7 +22,10 @@ function ProjectsInfo() {
         <TextIconsContainer>
           <CirclesContainer>
             <StyledIconCircle>
-              <div></div>
+              <div>desktop</div>
+            </StyledIconCircle>
+            <StyledIconCircle>
+              <div>mobile</div>
             </StyledIconCircle>
           </CirclesContainer>
         </TextIconsContainer>

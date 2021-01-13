@@ -38,16 +38,18 @@ export const ProjectsImagesContainer = styled.div`
 export const TextIconsContainer = styled.div`
   height: 100%;
   width: 30%;
-  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const CirclesContainer = styled.div`
   width: 100%;
   height: 45%;
-  background-color: lightpink;
+  display: flex;
+  align-items: center;
 `;
 
 export const StyledIconCircle = styled(IconCircle)`
-  margin: auto 40px auto 0;
   color: #000000;
+  margin-right: 50px;
 `;

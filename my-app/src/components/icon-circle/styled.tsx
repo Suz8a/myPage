@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Circle = styled.div`
-  width: 120px;
-  height: 120px;
-  background-color: #43d3f8;
+  width: 100px;
+  height: 100px;
+  background-color: #e3f5ff;
   border-radius: 50%;
 `;
