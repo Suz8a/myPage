@@ -86,6 +86,7 @@ export const ProjectsLink = styled.a`
   text-decoration: none;
   border-bottom: 2px solid #000000;
   &:hover {
-    color: #585858;
+    color: hsl(0, 0%, 40%);
+    border-bottom: 2px solid hsl(0, 0%, 40%);
   }
 `;
