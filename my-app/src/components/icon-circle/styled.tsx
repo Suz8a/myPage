@@ -5,4 +5,7 @@ export const Circle = styled.div`
   height: 100px;
   background-color: #e3f5ff;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;

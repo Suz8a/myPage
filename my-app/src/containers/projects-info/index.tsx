@@ -1,6 +1,10 @@
 import React from "react";
 import MySection from "../../components/section";
-import { projectsImages } from "../../content/section-projects-info";
+import {
+  projectsImages,
+  projectsLink,
+  projectsTitle,
+} from "../../content/section-projects-info";
 import {
   ProjectsContainer,
   TopProjectImage,
@@ -9,6 +13,10 @@ import {
   TextIconsContainer,
   CirclesContainer,
   StyledIconCircle,
+  StyledPhoneIcon,
+  StyledLaptopIcon,
+  ProjectsTitle,
+  ProjectsLink,
 } from "./styled";
 
 function ProjectsInfo() {
@@ -22,12 +30,16 @@ function ProjectsInfo() {
         <TextIconsContainer>
           <CirclesContainer>
             <StyledIconCircle>
-              <div>desktop</div>
+              <StyledLaptopIcon />
             </StyledIconCircle>
             <StyledIconCircle>
-              <div>mobile</div>
+              <StyledPhoneIcon />
             </StyledIconCircle>
           </CirclesContainer>
+          <ProjectsTitle>{projectsTitle}</ProjectsTitle>
+          <ProjectsLink href={projectsLink.link} target="_blank">
+            {projectsLink.text}
+          </ProjectsLink>
         </TextIconsContainer>
       </ProjectsContainer>
     </MySection>
