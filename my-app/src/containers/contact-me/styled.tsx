@@ -21,9 +21,26 @@ export const FormContainer = styled.div`
 `;
 
 export const TextIconContainer = styled.div`
-  width: 50%;
+  width: 40%;
   height: 100%;
-  background-color: lightsalmon;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+`;
+
+export const Title = styled.div`
+  width: 100%;
+  height: 80px;
+  font-weight: medium;
+  font-size: 80px;
+`;
+
+export const Message = styled.div`
+  width: 100%;
+  height: 40px;
+  font-size: 40px;
+  color: #1976d2;
+  margin: 30px 0;
 `;
 
 export const FormTextContainer = styled.div`
@@ -31,5 +48,10 @@ export const FormTextContainer = styled.div`
   height: 70vh;
   display: flex;
   position: relative;
-  background-color: lightgray;
+`;
+
+export const MailIcon = styled.img`
+  width: 100%;
+  height: 300px;
+  margin-top: auto;
 `;

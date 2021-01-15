@@ -5,8 +5,12 @@ import {
   TextIconContainer,
   FormTextContainer,
   FormContainer,
+  Title,
+  Message,
+  MailIcon,
 } from "./styled";
 import Form from "../../components/form";
+import mail from "../../assets/mail.png";
 
 type ContactMeProps = {
   className?: string;
@@ -18,7 +22,11 @@ function ContactMe({ className, id }: ContactMeProps) {
     <MyStyledSection className={className} id={id}>
       <Trapezoid />
       <FormTextContainer>
-        <TextIconContainer></TextIconContainer>
+        <TextIconContainer>
+          <Title>Contact Me</Title>
+          <Message>I will talk to you as soon as posible</Message>
+          <MailIcon src={mail} />
+        </TextIconContainer>
         <FormContainer>
           <Form />
         </FormContainer>

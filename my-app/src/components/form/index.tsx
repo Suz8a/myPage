@@ -10,11 +10,10 @@ import { Typography } from "@material-ui/core";
 function Form() {
   return (
     <FormContainer>
-      <StyledTextField text="First Name" />
-      <StyledTextField text="Last Name" />
-      <StyledTextField text="What's your email" />
-      <StyledBigTextField text="Your message..." />
-
+      <StyledTextField placeholder="First Name" />
+      <StyledTextField placeholder="Last Name" />
+      <StyledTextField placeholder="What's your email" />
+      <StyledBigTextField placeholder="Your message..." />
       <MainButton variant="contained" color="primary">
         <Typography variant="h3">Send Message</Typography>
       </MainButton>

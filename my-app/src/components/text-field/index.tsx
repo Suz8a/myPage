@@ -1,17 +1,13 @@
 import React from "react";
-import { Text, TextContainer } from "./styled";
+import { TextContainer } from "./styled";
 
 type TextFieldProps = {
-  text: string;
+  placeholder: string;
   className?: string;
 };
 
-function TextField({ text, className }: TextFieldProps) {
-  return (
-    <TextContainer className={className}>
-      <Text>{text}</Text>
-    </TextContainer>
-  );
+function TextField({ placeholder, className }: TextFieldProps) {
+  return <TextContainer className={className} placeholder={placeholder} />;
 }
 
 export default TextField;
