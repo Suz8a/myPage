@@ -1,5 +1,6 @@
 import React from "react";
 import ContactInfo from "../../containers/contact-info";
+import ContactMe from "../../containers/contact-me";
 import ProjectsInfo from "../../containers/projects-info";
 import SkillsInfo from "../../containers/skills-info";
 import WorkInfo from "../../containers/work-info";
@@ -11,6 +12,7 @@ function MainPage() {
       <SkillsInfo />
       <WorkInfo />
       <ProjectsInfo />
+      <ContactMe />
     </div>
   );
 }
