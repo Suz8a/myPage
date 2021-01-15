@@ -15,14 +15,15 @@ export const Trapezoid = styled.div`
 `;
 
 export const FormContainer = styled.div`
-  width: 50%;
-  padding-left: 50px;
+  width: 40%;
   height: 100%;
+  margin-left: auto;
 `;
 
 export const TextIconContainer = styled.div`
   width: 50%;
   height: 100%;
+  background-color: lightsalmon;
 `;
 
 export const FormTextContainer = styled.div`

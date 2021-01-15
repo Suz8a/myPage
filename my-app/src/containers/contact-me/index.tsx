@@ -4,13 +4,18 @@ import {
   Trapezoid,
   TextIconContainer,
   FormTextContainer,
+  FormContainer,
 } from "./styled";
 import Form from "../../components/form";
-import { FormContainer } from "../../components/form/styled";
 
-function ContactMe() {
+type ContactMeProps = {
+  className?: string;
+  id?: string;
+};
+
+function ContactMe({ className, id }: ContactMeProps) {
   return (
-    <MyStyledSection>
+    <MyStyledSection className={className} id={id}>
       <Trapezoid />
       <FormTextContainer>
         <TextIconContainer></TextIconContainer>

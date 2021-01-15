@@ -14,8 +14,9 @@ function Form() {
       <StyledTextField text="Last Name" />
       <StyledTextField text="What's your email" />
       <StyledBigTextField text="Your message..." />
+
       <MainButton variant="contained" color="primary">
-        <Typography variant="h3">holiwis</Typography>
+        <Typography variant="h3">Send Message</Typography>
       </MainButton>
     </FormContainer>
   );

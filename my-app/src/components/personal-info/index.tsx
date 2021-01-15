@@ -6,6 +6,7 @@ import {
   LinksContainer,
   MainButton,
   TextContainer,
+  Anchor,
 } from "./styled";
 import { name, job } from "../../content/section-contact-info";
 import ContactLink from "../../components/contact-link";
@@ -31,9 +32,11 @@ function PersonalInfo() {
           );
         })}
       </LinksContainer>
-      <MainButton variant="contained" color="primary">
-        <Typography variant="h2">Let's talk</Typography>
-      </MainButton>
+      <Anchor href="#ContactMeSection">
+        <MainButton variant="contained" color="primary">
+          <Typography variant="h2">Let's talk</Typography>
+        </MainButton>
+      </Anchor>
     </InfoContainer>
   );
 }

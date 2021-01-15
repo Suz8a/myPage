@@ -12,7 +12,7 @@ function MainPage() {
       <SkillsInfo />
       <WorkInfo />
       <ProjectsInfo />
-      <ContactMe />
+      <ContactMe id="ContactMeSection" />
     </div>
   );
 }

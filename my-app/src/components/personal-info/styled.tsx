@@ -35,10 +35,16 @@ export const MainButton = styled(Button)`
   height: 100px;
   border-radius: 20px;
   text-transform: none;
-  grid-area: button;
-  margin-top: auto;
 
   @media (max-height: 960px) {
     height: 90px;
   }
+`;
+
+export const Anchor = styled.a`
+  width: 100%;
+  height: 100px;
+  grid-area: button;
+  text-decoration: none;
+  margin-top: auto;
 `;
