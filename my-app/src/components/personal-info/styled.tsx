@@ -17,6 +17,9 @@ export const InfoContainer = styled.div`
     "contact-link"
     "button";
   grid-area: personalInfo;
+  @media (max-width: 1220px) {
+    text-align: center;
+  }
 `;
 export const TextContainer = styled.div`
   width: 100%;
@@ -38,6 +41,10 @@ export const MainButton = styled(Button)`
 
   @media (max-height: 960px) {
     height: 90px;
+  }
+
+  @media (max-width: 1220px) {
+    border-radius: 50px;
   }
 `;
 

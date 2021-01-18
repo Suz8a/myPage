@@ -12,5 +12,16 @@ export const ContactSectionGrid = styled.div`
     "personalInfo personalInfo profileImage profileImage"
     "personalInfo personalInfo profileImage profileImage "
     "bottom bottom bottom bottom  ";
+
+  @media (max-width: 1220px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+      "profileImage"
+      "profileImage"
+      "personalInfo"
+      "personalInfo"
+      "personalInfo";
+  }
   transition: linear;
 `;
