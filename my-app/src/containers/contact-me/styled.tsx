@@ -46,6 +46,10 @@ export const Message = styled.div`
 export const FormTextContainer = styled.div`
   width: 85%;
   height: 70vh;
+  max-width: 1280px;
+  min-height: 550px;
+  max-height: 550px;
+  box-sizing: border-box;
   display: flex;
   position: relative;
 `;

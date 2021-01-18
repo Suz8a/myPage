@@ -6,6 +6,10 @@ import ComputerIcon from "@material-ui/icons/Computer";
 export const ProjectsContainer = styled.div`
   width: 85%;
   height: 70vh;
+  max-width: 1280px;
+  min-height: 630px;
+  max-height: 750px;
+  box-sizing: border-box;
   background-color: #f5f9ff;
   border-radius: 20px;
   position: relative;
