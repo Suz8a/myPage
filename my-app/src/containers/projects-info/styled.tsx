@@ -16,6 +16,9 @@ export const ProjectsContainer = styled.div`
   display: flex;
   overflow: hidden;
   padding: 20px;
+  @media (max-width: 1400px) {
+    min-height: 700px;
+  }
 `;
 
 export const TopProjectImage = styled.img`
@@ -25,6 +28,11 @@ export const TopProjectImage = styled.img`
   top: -220px;
   left: 30px;
   box-shadow: 0px 2px 10px #b3b3b3;
+  transition: top 0.5s, left 0.5s;
+  @media (max-width: 1400px) {
+    top: -140px;
+    left: 20px;
+  }
 `;
 
 export const BottomProjectImage = styled.img`
@@ -34,6 +42,11 @@ export const BottomProjectImage = styled.img`
   bottom: -100px;
   left: 20%;
   box-shadow: 0px 2px 10px #b3b3b3;
+  transition: bottom 0.5s, left 0.5s;
+  @media (max-width: 1400px) {
+    left: 10%;
+    bottom: -40px;
+  }
 `;
 
 export const ProjectsImagesContainer = styled.div`
