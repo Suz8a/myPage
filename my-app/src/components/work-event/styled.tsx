@@ -3,6 +3,7 @@ import { workExperienceColor } from "../../theme";
 
 type EventProps = {
   moveToBottom?: boolean;
+  showSquarePoint?: boolean;
 };
 
 export const Label = styled.div`
@@ -32,8 +33,15 @@ export const EventContainer = styled.div<EventProps>`
   width: 360px;
   height: 350px;
   position: relative;
-  ${({ moveToBottom }) =>
-    moveToBottom ? "margin-top:auto" : "padding-top: 15px;"}
+  @media (min-width: 1400px) {
+    ${({ moveToBottom }) =>
+      moveToBottom ? "margin-top:auto" : "padding-top: 15px;"}
+  }
+  @media (max-width: 1400px) {
+    width: 360px;
+    height: 400px;
+    margin: 15px 0;
+  }
 `;
 
 export const Title = styled.div`
@@ -67,16 +75,32 @@ export const SquarePoint = styled.div<EventProps>`
   background-color: ${workExperienceColor};
   border-radius: 25px;
   position: absolute;
-  ${({ moveToBottom }) => (moveToBottom ? "top:0;" : "bottom:0;")}
   left: 0;
+  @media (min-width: 1400px) {
+    ${({ moveToBottom }) => (moveToBottom ? "top:0;" : "bottom:0;")}
+  }
+  ${({ showSquarePoint }) => (showSquarePoint ? "display:none;" : "")}
+  @media (max-width: 1400px) {
+    bottom: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    left: 10px;
+  }
 `;
 
 export const LineTextContainer = styled.div<EventProps>`
   width: 100%;
   height: 70%;
   display: flex;
-  ${({ moveToBottom }) =>
-    moveToBottom ? "position:absolute; bottom:0;" : "top:0;"}
+  @media (min-width: 1400px) {
+    ${({ moveToBottom }) =>
+      moveToBottom ? "position:absolute; bottom:0;" : "top:0;"}
+  }
+  @media (max-width: 1400px) {
+    top: 0;
+    height: 80%;
+  }
 `;
 
 export const LineContainer = styled.div`

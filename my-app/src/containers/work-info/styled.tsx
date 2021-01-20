@@ -14,6 +14,10 @@ export const Trapezoid = styled.div`
   left: 0;
   border-top: 100vh solid #ffffff;
   border-right: 20vw solid transparent;
+  @media (max-width: 1400px) {
+    width: 0;
+    border-right: 100vw solid transparent;
+  }
 `;
 
 export const StyledWorkLine = styled(WorkLine)`
@@ -21,6 +25,9 @@ export const StyledWorkLine = styled(WorkLine)`
   left: 0;
   top: 50%;
   width: 95%;
+  @media (max-width: 1400px) {
+    display: none;
+  }
 `;
 
 export const EventsContainer = styled.div`
@@ -32,4 +39,9 @@ export const EventsContainer = styled.div`
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
+  @media (max-width: 1400px) {
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+  }
 `;

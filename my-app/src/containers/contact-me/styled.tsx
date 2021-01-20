@@ -52,6 +52,7 @@ export const FormTextContainer = styled.div`
   box-sizing: border-box;
   display: flex;
   position: relative;
+  margin: 50px;
 `;
 
 export const MailIcon = styled.img`
