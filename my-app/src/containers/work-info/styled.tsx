@@ -33,15 +33,18 @@ export const StyledWorkLine = styled(WorkLine)`
 export const EventsContainer = styled.div`
   width: 85%;
   height: 650px;
-  max-width: 1280px;
   min-height: 650px;
-  max-height: 750px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
+  @media (min-width: 1400px) {
+    max-height: 750px;
+    max-width: 1280px;
+  }
   @media (max-width: 1400px) {
     flex-direction: column;
     align-items: center;
     height: fit-content;
+    margin: 50px 0 -30px 0;
   }
 `;
