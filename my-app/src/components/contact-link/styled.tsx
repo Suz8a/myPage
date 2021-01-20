@@ -12,8 +12,13 @@ export const MyLinkContact = styled.img`
     transform: scale(1.1);
   }
 
-  @media (max-height: 960px) {
+  @media (max-height: 960px) and (min-width: 1220px) {
     width: 75px;
     height: 75px;
+  }
+
+  @media (max-width: 1220px) {
+    width: 60px;
+    height: 60px;
   }
 `;

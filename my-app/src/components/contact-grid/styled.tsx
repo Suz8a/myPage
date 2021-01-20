@@ -22,6 +22,7 @@ export const ContactSectionGrid = styled.div`
       "personalInfo"
       "personalInfo"
       "personalInfo";
+    grid-gap: 30px;
   }
   transition: linear;
 `;

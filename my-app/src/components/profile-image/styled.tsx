@@ -5,8 +5,12 @@ export const MyImage = styled.img`
   height: 100%;
   border-radius: 50%;
   margin: auto 0 auto auto;
+  grid-area: profileImage;
   @media (max-width: 1220px) {
     margin: auto;
   }
-  grid-area: profileImage;
+  @media (max-width: 570px) {
+    width: 80%;
+    height: auto;
+  }
 `;

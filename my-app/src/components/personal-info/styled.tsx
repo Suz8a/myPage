@@ -30,7 +30,15 @@ export const TextContainer = styled.div`
 export const LinksContainer = styled.div`
   width: 100%;
   grid-area: contact-link;
-  margin-top: auto;
+
+  @media (min-width: 1221px) {
+    margin-top: auto;
+  }
+  @media (max-width: 1220px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const MainButton = styled(Button)`
@@ -39,12 +47,13 @@ export const MainButton = styled(Button)`
   border-radius: 20px;
   text-transform: none;
 
-  @media (max-height: 960px) {
+  @media (max-height: 960px) and (min-width: 1220px) {
     height: 90px;
   }
 
   @media (max-width: 1220px) {
     border-radius: 50px;
+    height: 60px;
   }
 `;
 
