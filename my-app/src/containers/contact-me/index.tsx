@@ -11,6 +11,8 @@ import {
 } from "./styled";
 import Form from "../../components/form";
 import mail from "../../assets/mail.png";
+import { addMessage } from "../../services/firebase";
+import { MessageInfo } from "../../types";
 
 type ContactMeProps = {
   className?: string;
@@ -18,6 +20,9 @@ type ContactMeProps = {
 };
 
 function ContactMe({ className, id }: ContactMeProps) {
+  function onClick(message: MessageInfo) {
+    addMessage(message);
+  }
   return (
     <MyStyledSection className={className} id={id}>
       <Trapezoid />
@@ -28,11 +33,7 @@ function ContactMe({ className, id }: ContactMeProps) {
           <MailIcon src={mail} />
         </TextIconContainer>
         <FormContainer>
-          <Form
-            onClick={() => {
-              alert("no");
-            }}
-          />
+          <Form onClick={onClick} />
         </FormContainer>
       </FormTextContainer>
     </MyStyledSection>

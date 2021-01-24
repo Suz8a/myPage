@@ -7,9 +7,10 @@ import {
 } from "./styled";
 import { Typography } from "@material-ui/core";
 import { useState } from "react";
+import { MessageInfo } from "../../types";
 
 type FormProps = {
-  onClick: () => void;
+  onClick: ({ name, lastName, email, message }: MessageInfo) => void;
 };
 
 function Form({ onClick }: FormProps) {
@@ -31,20 +32,45 @@ function Form({ onClick }: FormProps) {
     setMessage(e.target.value);
   }
 
+  function getMessageInfo() {
+    return {
+      name,
+      lastName,
+      email,
+      message,
+    };
+  }
+
   return (
     <FormContainer>
-      <StyledTextField placeholder="First Name" onChange={handleName} />
-      <StyledTextField placeholder="Last Name" onChange={handleLastName} />
+      <StyledTextField
+        placeholder="First Name"
+        onChange={handleName}
+        value={name}
+      />
+      <StyledTextField
+        placeholder="Last Name"
+        onChange={handleLastName}
+        value={lastName}
+      />
       <StyledTextField
         type="email"
         placeholder="What's your email"
         onChange={handleEmail}
+        value={email}
       />
       <StyledBigTextField
         placeholder="Your message..."
         onChange={handleMessage}
+        value={message}
       />
-      <MainButton onClick={onClick} variant="contained" color="primary">
+      <MainButton
+        onClick={() => {
+          onClick(getMessageInfo());
+        }}
+        variant="contained"
+        color="primary"
+      >
         <Typography variant="h3">Send Message</Typography>
       </MainButton>
     </FormContainer>

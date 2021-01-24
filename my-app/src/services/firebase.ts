@@ -1,4 +1,5 @@
 import firebase from "firebase";
+import { MessageInfo } from "../types";
 
 var firebaseConfig = {
   apiKey: "AIzaSyBQHgYVSHrZdyzHi9LjYmRlv-stJ74dY8Q",
@@ -11,5 +12,18 @@ var firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
+
+const db = firebase.firestore();
+
+export const addMessage = (message: MessageInfo) => {
+  db.collection("messages")
+    .add(message)
+    .then(() => {
+      alert("document successfully written");
+    })
+    .catch(() => {
+      alert("error writing document: ");
+    });
+};
 
 export default firebase;
