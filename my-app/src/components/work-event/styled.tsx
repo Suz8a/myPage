@@ -79,13 +79,14 @@ export const SquarePoint = styled.div<EventProps>`
   @media (min-width: 1400px) {
     ${({ moveToBottom }) => (moveToBottom ? "top:0;" : "bottom:0;")}
   }
-  ${({ showSquarePoint }) => (showSquarePoint ? "display:none;" : "")}
+
   @media (max-width: 1400px) {
     bottom: 0;
     width: 40px;
     height: 40px;
     border-radius: 10px;
     left: 10px;
+    ${({ showSquarePoint }) => (showSquarePoint ? "display:none;" : "")}
   }
 `;
 
