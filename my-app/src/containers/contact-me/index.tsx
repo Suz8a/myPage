@@ -28,7 +28,11 @@ function ContactMe({ className, id }: ContactMeProps) {
           <MailIcon src={mail} />
         </TextIconContainer>
         <FormContainer>
-          <Form />
+          <Form
+            onClick={() => {
+              alert("no");
+            }}
+          />
         </FormContainer>
       </FormTextContainer>
     </MyStyledSection>

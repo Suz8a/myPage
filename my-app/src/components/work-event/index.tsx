@@ -46,7 +46,10 @@ function WorkEvent({
           <Description>{description}</Description>
         </InfoContainer>
       </LineTextContainer>
-      {showSquarePoint && <SquarePoint moveToBottom={moveToBottom} />}
+      <SquarePoint
+        moveToBottom={moveToBottom}
+        showSquarePoint={showSquarePoint}
+      />
     </EventContainer>
   );
 }
