@@ -57,12 +57,20 @@ function Form({ onClick }: FormProps) {
   function getMessageInfo() {
     checkErrors();
 
-    return emptyText(name) ||
+    if (
+      emptyText(name) ||
       emptyText(lastName) ||
       emailValidation(email) ||
       emptyText(message)
-      ? true
-      : { name, lastName, email, message };
+    )
+      return true;
+
+    const info = { name, lastName, email, message };
+    setName("");
+    setLastName("");
+    setEmail("");
+    setMessage("");
+    return info;
   }
 
   return (
