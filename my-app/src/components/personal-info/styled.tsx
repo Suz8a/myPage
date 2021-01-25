@@ -46,6 +46,8 @@ export const MainButton = styled(Button)`
   height: 100px;
   border-radius: 20px;
   text-transform: none;
+  margin-top: auto;
+  grid-area: button;
 
   @media (max-height: 960px) and (min-width: 1220px) {
     height: 90px;
@@ -55,12 +57,4 @@ export const MainButton = styled(Button)`
     border-radius: 50px;
     height: 60px;
   }
-`;
-
-export const Anchor = styled.a`
-  width: 100%;
-  height: 100px;
-  grid-area: button;
-  text-decoration: none;
-  margin-top: auto;
 `;

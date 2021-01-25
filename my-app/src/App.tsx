@@ -5,14 +5,17 @@ import { MuiThemeProvider } from "@material-ui/core";
 import { StylesProvider } from "@material-ui/styles";
 import { Router } from "./router";
 import theme from "./theme";
+import { NotificationProvider } from "./providers/notification-provider";
 
 function App() {
   return (
     <StylesProvider injectFirst={true}>
       <MuiThemeProvider theme={theme}>
-        <BrowserRouter>
-          <Router />
-        </BrowserRouter>
+        <NotificationProvider>
+          <BrowserRouter>
+            <Router />
+          </BrowserRouter>
+        </NotificationProvider>
       </MuiThemeProvider>
     </StylesProvider>
   );

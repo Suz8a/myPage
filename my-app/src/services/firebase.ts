@@ -15,18 +15,23 @@ firebase.initializeApp(firebaseConfig);
 
 const db = firebase.firestore();
 
-export const addMessage = (message: MessageInfo | boolean) => {
+export const addMessage = (
+  message: MessageInfo | boolean,
+  onIncompleted: () => void,
+  onPost: () => void,
+  onError: () => void
+) => {
   message === true || message === false
-    ? alert("Please check your information")
+    ? onIncompleted()
     : db
         .collection("messages")
         .add(message)
         .then(() => {
-          alert("Message saved");
+          onPost();
         })
         .catch((e) => {
           console.log(e);
-          alert("Error saving message");
+          onError();
         });
 };
 

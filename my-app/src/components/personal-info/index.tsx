@@ -6,11 +6,18 @@ import {
   LinksContainer,
   MainButton,
   TextContainer,
-  Anchor,
 } from "./styled";
 import { name, job } from "../../content/section-contact-info";
 import ContactLink from "../../components/contact-link";
 import { contactLinks } from "../../content/section-contact-info";
+
+import * as Scroll from "react-scroll";
+
+var scroll = () =>
+  Scroll.animateScroll.scrollToBottom({
+    duration: 100,
+    smooth: "easeInQuart",
+  });
 
 function PersonalInfo() {
   return (
@@ -32,11 +39,10 @@ function PersonalInfo() {
           );
         })}
       </LinksContainer>
-      <Anchor href="#ContactMeSection">
-        <MainButton variant="contained" color="primary">
-          <Typography variant="h2">Let's talk</Typography>
-        </MainButton>
-      </Anchor>
+
+      <MainButton variant="contained" color="primary" onClick={scroll}>
+        <Typography variant="h2">Let's talk</Typography>
+      </MainButton>
     </InfoContainer>
   );
 }
