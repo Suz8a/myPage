@@ -15,15 +15,18 @@ firebase.initializeApp(firebaseConfig);
 
 const db = firebase.firestore();
 
-export const addMessage = (message: MessageInfo) => {
-  db.collection("messages")
-    .add(message)
-    .then(() => {
-      alert("document successfully written");
-    })
-    .catch(() => {
-      alert("error writing document: ");
-    });
+export const addMessage = (message: MessageInfo | boolean) => {
+  message === true || message === false
+    ? alert("Please check your information")
+    : db
+        .collection("messages")
+        .add(message)
+        .then(() => {
+          alert("Message saved");
+        })
+        .catch(() => {
+          alert("Error saving message");
+        });
 };
 
 export default firebase;

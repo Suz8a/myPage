@@ -20,7 +20,8 @@ type ContactMeProps = {
 };
 
 function ContactMe({ className, id }: ContactMeProps) {
-  function onClick(message: MessageInfo) {
+  function onClick(message: MessageInfo | boolean) {
+    console.log(message);
     addMessage(message);
   }
   return (
