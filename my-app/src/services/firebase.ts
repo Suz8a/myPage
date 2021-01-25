@@ -24,7 +24,8 @@ export const addMessage = (message: MessageInfo | boolean) => {
         .then(() => {
           alert("Message saved");
         })
-        .catch(() => {
+        .catch((e) => {
+          console.log(e);
           alert("Error saving message");
         });
 };

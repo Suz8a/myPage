@@ -65,7 +65,7 @@ function Form({ onClick }: FormProps) {
     )
       return true;
 
-    const info = { name, lastName, email, message };
+    var info = { name, lastName, email, message };
     setName("");
     setLastName("");
     setEmail("");
