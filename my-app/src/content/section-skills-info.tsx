@@ -5,11 +5,16 @@ import javascript from "../assets/javascript.png";
 import html5 from "../assets/html5.png";
 import vuejs from "../assets/vue.png";
 import styledComponents from "../assets/styled.png";
+import typescript from "../assets/typescript.png";
 
 export const skills = [
   {
     name: "Javascript",
     img: javascript,
+  },
+  {
+    name: "Typescript",
+    img: typescript,
   },
   {
     name: "HTML5",

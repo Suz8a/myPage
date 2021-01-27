@@ -13,7 +13,7 @@ import Form from "../../components/form";
 import mail from "../../assets/mail.png";
 import { addMessage } from "../../services/firebase";
 import { MessageInfo } from "../../types";
-import MuiAlert, { AlertProps } from "@material-ui/lab/Alert";
+import MuiAlert, { AlertProps, Color } from "@material-ui/lab/Alert";
 import Snackbar from "@material-ui/core/Snackbar";
 
 type ContactMeProps = {
@@ -26,7 +26,6 @@ function Alert(props: AlertProps) {
 }
 
 function ContactMe({ className, id }: ContactMeProps) {
-  type Color = "success" | "info" | "warning" | "error";
   const [open, setOpen] = useState(false);
   const [alertSeverity, setAlertSeverity] = useState<Color>("success");
 
