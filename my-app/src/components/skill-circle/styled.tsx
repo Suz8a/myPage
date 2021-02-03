@@ -47,6 +47,7 @@ export const CircleLabel = styled.div`
   margin: 30px;
   position: relative;
   transition: 0.35s;
+
   @media (max-width: 920px) {
     margin: 20px;
   }
@@ -62,4 +63,7 @@ export const Label = styled.div<LabelProps>`
   font-weight: 900;
   font-size: 25px;
   user-select: none;
+  @media (max-width: 1220px) {
+    color: transparent;
+  }
 `;
