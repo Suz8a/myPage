@@ -46,6 +46,11 @@ export const TopProjectImage = styled.img`
     width: 350px;
     left: 30px;
   }
+  @media (max-width: 480px) {
+    top: -115px;
+    width: 230px;
+    left: 5px;
+  }
 `;
 
 export const BottomProjectImage = styled.img`
@@ -74,6 +79,11 @@ export const ProjectsImagesContainer = styled.div`
     height: 900px;
     overflow: hidden;
   }
+  @media (max-width: 480px) {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+  }
 `;
 
 export const TextIconsContainer = styled.div`
@@ -97,6 +107,10 @@ export const CirclesContainer = styled.div`
     width: fit-content;
     margin: 20px -45px 30px 0;
   }
+  @media (max-width: 1220px) {
+    width: fit-content;
+    margin-bottom: 15px;
+  }
 `;
 
 export const StyledIconCircle = styled(IconCircle)`
@@ -105,6 +119,10 @@ export const StyledIconCircle = styled(IconCircle)`
   @media (max-width: 1220px) {
     width: 120px;
     height: 120px;
+  }
+  @media (max-width: 480px) {
+    width: 100px;
+    height: 100px;
   }
 `;
 
@@ -125,6 +143,10 @@ export const ProjectsTitle = styled.div`
   font-size: 30px;
   font-weight: 500;
   color: #000000;
+  transition: 0.5s;
+  @media (max-width: 480px) {
+    font-size: 20px;
+  }
 `;
 
 export const ProjectsLink = styled.a`
@@ -136,8 +158,16 @@ export const ProjectsLink = styled.a`
   margin-top: 30px;
   text-decoration: none;
   border-bottom: 2px solid #000000;
+  transition: 0.5s;
+
   &:hover {
     color: hsl(0, 0%, 40%);
     border-bottom: 2px solid hsl(0, 0%, 40%);
+  }
+
+  @media (max-width: 480px) {
+    font-size: 25px;
+    border-bottom: 1px solid #000000;
+    margin-top: 20px;
   }
 `;
