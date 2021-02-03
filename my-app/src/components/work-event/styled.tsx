@@ -42,6 +42,11 @@ export const EventContainer = styled.div<EventProps>`
     height: 400px;
     margin: 15px 0;
   }
+  @media (max-width: 400px) {
+    width: 340px;
+    height: 400px;
+    margin: 15px 0;
+  }
 `;
 
 export const Title = styled.div`
@@ -86,7 +91,7 @@ export const SquarePoint = styled.div<EventProps>`
     height: 40px;
     border-radius: 10px;
     left: 10px;
-    ${({ showSquarePoint }) => (showSquarePoint ? "display:none;" : "")}
+    ${({ showSquarePoint }) => (!showSquarePoint ? "display:none;" : "")}
   }
 `;
 

@@ -4,6 +4,25 @@ type LabelProps = {
   text: string;
 };
 
+const circleResponsiveSize = `
+@media (max-width: 1220px) {
+  width: 170px;
+  height: 170px;
+}
+@media (max-width: 920px) {
+  width: 150px;
+  height: 150px;
+}
+@media (max-width: 630px) {
+  width: 130px;
+  height: 130px;
+}
+@media (max-width: 560px) {
+  width: 110px;
+  height: 110px;
+}
+`;
+
 export const Circle = styled.img`
   width: 200px;
   height: 200px;
@@ -12,9 +31,12 @@ export const Circle = styled.img`
   position: absolute;
   transition: 0.35s;
   opacity: 1;
-  &:hover {
-    opacity: 0.2;
+  @media (min-width: 1221px) {
+    &:hover {
+      opacity: 0.2;
+    }
   }
+  ${circleResponsiveSize}
 `;
 
 export const CircleLabel = styled.div`
@@ -24,6 +46,12 @@ export const CircleLabel = styled.div`
   background-color: rgb(0, 0, 0);
   margin: 30px;
   position: relative;
+  transition: 0.35s;
+
+  @media (max-width: 920px) {
+    margin: 20px;
+  }
+  ${circleResponsiveSize}
 `;
 
 export const Label = styled.div<LabelProps>`
@@ -35,4 +63,7 @@ export const Label = styled.div<LabelProps>`
   font-weight: 900;
   font-size: 25px;
   user-select: none;
+  @media (max-width: 1220px) {
+    color: transparent;
+  }
 `;
