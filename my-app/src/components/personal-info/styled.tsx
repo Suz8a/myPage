@@ -48,9 +48,9 @@ export const Job = styled.div`
 `;
 
 export const ButtonText = styled.div`
-  font-size: 35px;
+  font-size: 60px;
   font-weight: 500;
-  @media (max-width: 560px) {
+  @media (max-width: 1220px) {
     font-size: 30px;
   }
 `;
