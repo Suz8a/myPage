@@ -1,10 +1,12 @@
-import { Typography } from "@material-ui/core";
 import React from "react";
 import {
+  ButtonText,
   Divider,
   InfoContainer,
+  Job,
   LinksContainer,
   MainButton,
+  Name,
   TextContainer,
 } from "./styled";
 import { name, job } from "../../content/section-contact-info";
@@ -23,9 +25,9 @@ function PersonalInfo() {
   return (
     <InfoContainer>
       <TextContainer>
-        <Typography variant="h2">{name}</Typography>
+        <Name>{name}</Name>
         <Divider />
-        <Typography variant="h4">{job}</Typography>
+        <Job>{job}</Job>
       </TextContainer>
       <LinksContainer>
         {contactLinks.map((contactLink, index) => {
@@ -41,7 +43,7 @@ function PersonalInfo() {
       </LinksContainer>
 
       <MainButton variant="contained" color="primary" onClick={scroll}>
-        <Typography variant="h2">Let's talk</Typography>
+        <ButtonText>Let's talk</ButtonText>
       </MainButton>
     </InfoContainer>
   );

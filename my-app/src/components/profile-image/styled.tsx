@@ -9,8 +9,4 @@ export const MyImage = styled.img`
   @media (max-width: 1220px) {
     margin: auto;
   }
-  @media (max-width: 570px) {
-    width: 80%;
-    height: auto;
-  }
 `;

@@ -15,14 +15,15 @@ export const ContactSectionGrid = styled.div`
 
   @media (max-width: 1220px) {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     grid-template-areas:
       "profileImage"
       "profileImage"
       "personalInfo"
       "personalInfo"
-      "personalInfo";
-    grid-gap: 30px;
+      "personalInfo"
+      "bottom";
+    grid-gap: 40px;
   }
   transition: linear;
 `;
