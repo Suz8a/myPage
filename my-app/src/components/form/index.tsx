@@ -4,8 +4,8 @@ import {
   StyledTextField,
   StyledBigTextField,
   MainButton,
+  ButtonText,
 } from "./styled";
-import { Typography } from "@material-ui/core";
 import { useState } from "react";
 import { MessageInfo } from "../../types";
 
@@ -107,7 +107,7 @@ function Form({ onClick }: FormProps) {
         variant="contained"
         color="primary"
       >
-        <Typography variant="h3">Send Message</Typography>
+        <ButtonText>Send Message</ButtonText>
       </MainButton>
     </FormContainer>
   );

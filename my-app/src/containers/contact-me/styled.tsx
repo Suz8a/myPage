@@ -18,6 +18,10 @@ export const FormContainer = styled.div`
   width: 40%;
   height: 100%;
   margin-left: auto;
+  @media (max-width: 880px) {
+    width: 100%;
+    margin-left: 0;
+  }
 `;
 
 export const TextIconContainer = styled.div`
@@ -26,6 +30,10 @@ export const TextIconContainer = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  @media (max-width: 880px) {
+    font-size: 30px;
+    width: 100%;
+  }
 `;
 
 export const Title = styled.div`
@@ -33,6 +41,12 @@ export const Title = styled.div`
   height: 80px;
   font-weight: medium;
   font-size: 80px;
+  @media (max-width: 1200px) {
+    font-size: 60px;
+  }
+  @media (max-width: 880px) {
+    font-size: 50px;
+  }
 `;
 
 export const Message = styled.div`
@@ -41,6 +55,9 @@ export const Message = styled.div`
   font-size: 40px;
   color: #1976d2;
   margin: 30px 0;
+  @media (max-width: 880px) {
+    font-size: 30px;
+  }
 `;
 
 export const FormTextContainer = styled.div`
@@ -48,15 +65,35 @@ export const FormTextContainer = styled.div`
   height: 70vh;
   max-width: 1280px;
   min-height: 550px;
-  max-height: 550px;
   box-sizing: border-box;
   display: flex;
   position: relative;
   margin: 50px;
+  @media (min-width: 1400px) {
+    max-height: 550px;
+  }
+  @media (max-width: 1400px) {
+    font-size: 40px;
+  }
+  @media (max-width: 880px) {
+    flex-direction: column;
+    width: 90%;
+    height: 100vh;
+    padding: 10px 0;
+    margin: 0;
+  }
 `;
 
 export const MailIcon = styled.img`
   width: 100%;
   height: 300px;
   margin-top: auto;
+  @media (max-width: 1220px) {
+    height: 250px;
+  }
+  @media (max-width: 880px) {
+    width: 180px;
+    height: 130px;
+    margin: 10px 0;
+  }
 `;

@@ -12,6 +12,9 @@ export const FormContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
+  @media (max-width: 880px) {
+    margin: 40px 0;
+  }
 `;
 
 export const StyledBigTextField = styled.textarea<ValidationProps>`
@@ -46,4 +49,19 @@ export const MainButton = styled(Button)`
   border-radius: 10px;
   text-transform: none;
   align-self: flex-end;
+  @media (max-width: 880px) {
+    height: 50px;
+  }
+`;
+
+export const ButtonText = styled.div`
+  font-size: 50px;
+  font-weight: 500;
+  transition: 0.5s;
+  @media (max-width: 1400px) {
+    font-size: 40px;
+  }
+  @media (max-width: 1220px) {
+    font-size: 30px;
+  }
 `;
