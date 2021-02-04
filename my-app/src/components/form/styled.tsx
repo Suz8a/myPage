@@ -13,7 +13,7 @@ export const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
   @media (max-width: 880px) {
-    margin: 40px 0;
+    margin: 10px 0;
   }
 `;
 

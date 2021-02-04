@@ -45,7 +45,9 @@ export const Title = styled.div`
     font-size: 60px;
   }
   @media (max-width: 880px) {
-    font-size: 50px;
+    font-size: 40px;
+    height: fit-content;
+    margin-top: 5px;
   }
 `;
 
@@ -56,7 +58,8 @@ export const Message = styled.div`
   color: #1976d2;
   margin: 30px 0;
   @media (max-width: 880px) {
-    font-size: 30px;
+    font-size: 25px;
+    margin: 10px 0 20px 0;
   }
 `;
 
@@ -92,8 +95,8 @@ export const MailIcon = styled.img`
     height: 250px;
   }
   @media (max-width: 880px) {
-    width: 180px;
-    height: 130px;
+    width: 120px;
+    height: 80px;
     margin: 10px 0;
   }
 `;
