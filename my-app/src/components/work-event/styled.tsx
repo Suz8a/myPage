@@ -27,6 +27,9 @@ export const LabelTitle = styled.div`
 export const LabelContainer = styled.div`
   width: 220px;
   position: relative;
+  @media (max-width: 400px) {
+    width: 160px;
+  }
 `;
 
 export const EventContainer = styled.div<EventProps>`
@@ -43,7 +46,7 @@ export const EventContainer = styled.div<EventProps>`
     margin: 15px 0;
   }
   @media (max-width: 400px) {
-    width: 340px;
+    width: 90%;
     height: 400px;
     margin: 15px 0;
   }
@@ -57,6 +60,10 @@ export const Title = styled.div`
   font-size: 25px;
   margin: 10px 0 10px 0;
   font-weight: 500;
+  @media (max-width: 880px) {
+    width: 100%;
+    height: fit-content;
+  }
 `;
 
 export const Description = styled.div`
