@@ -15,8 +15,7 @@ export const contactLinks = [
   {
     contact: "linkedin",
     imgSource: linkedin,
-    link:
-      "https://www.linkedin.com/in/suzclem-adriana-ochoa-casillas-a52628194/",
+    link: "https://www.linkedin.com/in/adri-dev",
   },
   {
     contact: "stackoverflow",
