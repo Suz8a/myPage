@@ -18,7 +18,7 @@ export const workExperience = [
       "Worked 1 year as a Vue js front end developer for Instituto Tecnológico de Culiacán",
   },
   {
-    year: "2021 - Present",
+    year: "2021",
     job: "Frontend developer at albo",
     description:
       "Implementing new features, creating reusable components and fixing bugs",
