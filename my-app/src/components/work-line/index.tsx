@@ -1,5 +1,5 @@
 import React from "react";
-import { Line, LinePointContainer, Point } from "./styled";
+import { RightSquare, LeftSquare } from "./styled";
 
 type WorkLineProps = {
   className?: string;
@@ -7,10 +7,10 @@ type WorkLineProps = {
 
 function WorkLine({ className }: WorkLineProps) {
   return (
-    <LinePointContainer className={className}>
-      <Line />
-      <Point />
-    </LinePointContainer>
+    <div className={className}>
+      <RightSquare />
+      <LeftSquare />
+    </div>
   );
 }
 

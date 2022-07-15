@@ -23,7 +23,7 @@ export const StyledBigTextField = styled.textarea<ValidationProps>`
   padding: 15px;
   box-sizing: border-box;
   width: 100%;
-  border-radius: 40px;
+  border-radius: 10px;
 
   text-align: left;
   position: relative;

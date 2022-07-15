@@ -21,7 +21,6 @@ function WorkInfo() {
             job={work.job}
             description={work.description}
             showSquarePoint={index !== workExperience.length - 1}
-            moveToBottom={index % 2 !== 0}
           />
         ))}
       </EventsContainer>

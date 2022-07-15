@@ -21,10 +21,6 @@ export const Trapezoid = styled.div`
 `;
 
 export const StyledWorkLine = styled(WorkLine)`
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 95%;
   @media (max-width: 1400px) {
     display: none;
   }

@@ -13,4 +13,11 @@ const theme = createMuiTheme({
 
 export const workExperienceColor = "#0752BB";
 
+export const fontSizes = {
+  h3: "20px",
+  h4: "18px",
+  paragraph: "16px",
+  small: "12px",
+};
+
 export default theme;

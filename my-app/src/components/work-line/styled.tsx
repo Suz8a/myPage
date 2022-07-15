@@ -1,25 +1,30 @@
 import styled from "styled-components";
 import { workExperienceColor } from "../../theme";
 
-export const Line = styled.div`
-  width: 100%;
-  height: 3px;
-  background-color: ${workExperienceColor};
+export const RightSquare = styled.div`
   position: absolute;
-  top: 40%;
+  width: 40%;
+  height: 350px;
+  top: 100px;
+  left: 50%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top: 3px solid black;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  border-color: ${workExperienceColor};
 `;
 
-export const Point = styled.div`
-  width: 20px;
-  height: 20px;
-  background-color: ${workExperienceColor};
-  border-radius: 50%;
+export const LeftSquare = styled.div`
   position: absolute;
-  right: 0;
-`;
-
-export const LinePointContainer = styled.div`
-  width: 100%;
-  position: relative;
-  height: 20px;
+  width: 40%;
+  height: 350px;
+  top: 453px;
+  left: 10%;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top: 3px solid black;
+  border-left: 3px solid black;
+  border-bottom: 3px solid black;
+  border-color: ${workExperienceColor};
 `;

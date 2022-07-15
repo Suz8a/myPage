@@ -34,11 +34,12 @@ export const LabelContainer = styled.div`
 
 export const EventContainer = styled.div<EventProps>`
   width: 360px;
-  height: 350px;
+  height: 280px;
   position: relative;
+  background-color: #917c7c;
   @media (min-width: 1400px) {
     ${({ moveToBottom }) =>
-      moveToBottom ? "margin-top:auto" : "padding-top: 15px;"}
+      moveToBottom ? "margin-top:auto" : "padding-top: 8px;"}
   }
   @media (max-width: 1400px) {
     width: 360px;
@@ -82,12 +83,12 @@ export const InfoContainer = styled.div`
 `;
 
 export const SquarePoint = styled.div<EventProps>`
-  width: 65px;
-  height: 65px;
+  width: 48px;
+  height: 48px;
   background-color: ${workExperienceColor};
-  border-radius: 25px;
+  border-radius: 10px;
   position: absolute;
-  left: 0;
+  left: 7.5px;
   @media (min-width: 1400px) {
     ${({ moveToBottom }) => (moveToBottom ? "top:0;" : "bottom:0;")}
   }
@@ -97,14 +98,14 @@ export const SquarePoint = styled.div<EventProps>`
     width: 40px;
     height: 40px;
     border-radius: 10px;
-    left: 10px;
+    left: 7.5px;
     ${({ showSquarePoint }) => (!showSquarePoint ? "display:none;" : "")}
   }
 `;
 
 export const LineTextContainer = styled.div<EventProps>`
   width: 100%;
-  height: 70%;
+  height: 80%;
   display: flex;
   @media (min-width: 1400px) {
     ${({ moveToBottom }) =>
