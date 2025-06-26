@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   MyStyledSection,
   Trapezoid,
@@ -8,18 +8,26 @@ import {
   Title,
   Message,
   MailIcon,
-} from "./styled";
-import Form from "../../components/form";
-import mail from "../../assets/mail.png";
-import { addMessage } from "../../services/firebase";
-import { MessageInfo } from "../../types";
-import MuiAlert, { AlertProps, Color } from "@material-ui/lab/Alert";
-import Snackbar from "@material-ui/core/Snackbar";
+} from './styled';
+import Form from '../../components/form';
+import mail from '../../assets/mail.png';
+import { addMessage } from '../../services/firebase';
+import { MessageInfo } from '../../types';
+import { Snackbar, Alert as MuiAlert, AlertProps } from '@mui/material';
 
-type ContactMeProps = {
+type AlertMessageColor = NonNullable<AlertProps['color']>;
+
+const ALERT_MESSAGE: Record<AlertMessageColor, string> = {
+  success: 'Message saved',
+  error: 'Error saving message',
+  warning: 'Please check your information',
+  info: '', // Not used, but included for completeness
+};
+
+interface ContactMeProps {
   className?: string;
   id?: string;
-};
+}
 
 function Alert(props: AlertProps) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
@@ -27,31 +35,24 @@ function Alert(props: AlertProps) {
 
 function ContactMe({ className, id }: ContactMeProps) {
   const [open, setOpen] = useState(false);
-  const [alertSeverity, setAlertSeverity] = useState<Color>("success");
+  const [alertSeverity, setAlertSeverity] =
+    useState<AlertMessageColor>('success');
 
-  const alertMessages: { [key: string]: string } = {
-    success: "Message saved",
-    error: "Error saving message",
-    warning: "Please check your information",
-  };
-
-  const handleClose = (event?: React.SyntheticEvent, reason?: string) => {
-    if (reason === "clickaway") {
-      return;
-    }
+  const handleClose = (_: React.SyntheticEvent, reason?: string) => {
+    if (reason === 'clickaway') return;
     setOpen(false);
   };
 
   const showSuccessMessage = () => {
-    setAlertSeverity("success");
+    setAlertSeverity('success');
     setOpen(true);
   };
   const showErrorMessage = () => {
-    setAlertSeverity("error");
+    setAlertSeverity('error');
     setOpen(true);
   };
   const showIncompleteInfoMessage = () => {
-    setAlertSeverity("warning");
+    setAlertSeverity('warning');
     setOpen(true);
   };
 
@@ -76,9 +77,9 @@ function ContactMe({ className, id }: ContactMeProps) {
           <Form onClick={onClick} />
         </FormContainer>
       </FormTextContainer>
-      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+      <Snackbar open={open} autoHideDuration={6000} onClick={handleClose}>
         <Alert onClose={handleClose} severity={alertSeverity}>
-          {alertMessages[alertSeverity]}
+          {ALERT_MESSAGE[alertSeverity]}
         </Alert>
       </Snackbar>
     </MyStyledSection>

@@ -1,15 +1,10 @@
-import { ReportHandler } from 'web-vitals';
+import { onCLS, onINP, onLCP } from 'web-vitals';
 
-const reportWebVitals = (onPerfEntry?: ReportHandler) => {
-  if (onPerfEntry && onPerfEntry instanceof Function) {
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-      getCLS(onPerfEntry);  
-      getFID(onPerfEntry);
-      getFCP(onPerfEntry);
-      getLCP(onPerfEntry);
-      getTTFB(onPerfEntry);
-    });
-  }
-}
+// TODO: Implement google analytics or other logging service
+export const logDelta = ({ name, id, delta }: any) => {
+  console.log(`${name} matching ID ${id} changed by ${delta}`);
+};
 
-export default reportWebVitals;
+onCLS(logDelta);
+onINP(logDelta);
+onLCP(logDelta);

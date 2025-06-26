@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import TextField from "../../components/text-field";
-import Button from "@material-ui/core/Button";
+import styled from 'styled-components';
+import TextField from '../../components/text-field';
+import { Button } from '@mui/material';
 
 type ValidationProps = {
   validation: boolean;
@@ -29,10 +29,10 @@ export const StyledBigTextField = styled.textarea<ValidationProps>`
   position: relative;
   background-color: #ffffff;
   font-size: 25px;
-  font-family: "roboto";
+  font-family: 'roboto';
   resize: none;
   ${({ validation }) =>
-    validation ? "border: 1px solid #FF0000;" : "border: 1px solid #a3a3a3;"}
+    validation ? 'border: 1px solid #FF0000;' : 'border: 1px solid #a3a3a3;'}
 `;
 
 export const StyledTextField = styled(TextField)<ValidationProps>`
@@ -40,7 +40,7 @@ export const StyledTextField = styled(TextField)<ValidationProps>`
   padding: 0 15px;
   box-sizing: border-box;
   ${({ validation }) =>
-    validation ? "border: 1px solid #FF0000;" : "border: 1px solid #a3a3a3;"}
+    validation ? 'border: 1px solid #FF0000;' : 'border: 1px solid #a3a3a3;'}
 `;
 
 export const MainButton = styled(Button)`

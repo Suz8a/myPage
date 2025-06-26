@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import Button from "@material-ui/core/Button";
+import styled from 'styled-components';
+import { Button } from '@mui/material';
 
 export const Divider = styled.div`
   background-color: black;
@@ -16,9 +16,9 @@ export const InfoContainer = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
   grid-template-areas:
-    "name-job"
-    "contact-link"
-    "button";
+    'name-job'
+    'contact-link'
+    'button';
   grid-area: personalInfo;
   @media (max-width: 1220px) {
     text-align: center;
@@ -41,7 +41,7 @@ export const Name = styled.div`
 
 export const Job = styled.div`
   font-size: 35px;
-  font-weight: "lighter";
+  font-weight: 'lighter';
   @media (max-width: 560px) {
     font-size: 25px;
   }

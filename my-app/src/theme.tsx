@@ -1,16 +1,14 @@
-import { createMuiTheme } from "@material-ui/core/styles";
+import { createTheme } from '@mui/material';
 
-const theme = createMuiTheme({
+export const theme = createTheme({
   palette: {
     primary: {
-      main: "#1976d2",
+      main: '#1976d2',
     },
     secondary: {
-      main: "#F5F9FF",
+      main: '#F5F9FF',
     },
   },
 });
 
-export const workExperienceColor = "#0752BB";
-
-export default theme;
+export const workExperienceColor = '#0752BB';

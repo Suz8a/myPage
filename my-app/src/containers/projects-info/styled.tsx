@@ -1,7 +1,6 @@
-import styled from "styled-components";
-import IconCircle from "../../components/icon-circle";
-import PhoneAndroidIcon from "@material-ui/icons/PhoneAndroid";
-import ComputerIcon from "@material-ui/icons/Computer";
+import styled from 'styled-components';
+import IconCircle from '../../components/icon-circle';
+import { Computer, PhoneAndroid } from '@mui/icons-material';
 
 export const ProjectsContainer = styled.div`
   width: 85%;
@@ -126,13 +125,13 @@ export const StyledIconCircle = styled(IconCircle)`
   }
 `;
 
-export const StyledPhoneIcon = styled(PhoneAndroidIcon)`
+export const StyledPhoneIcon = styled(PhoneAndroid)`
   width: 55px;
   height: auto;
   color: #3d7394;
 `;
 
-export const StyledLaptopIcon = styled(ComputerIcon)`
+export const StyledLaptopIcon = styled(Computer)`
   width: 55px;
   height: auto;
   color: #3d7394;

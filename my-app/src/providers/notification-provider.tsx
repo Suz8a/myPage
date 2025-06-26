@@ -1,11 +1,11 @@
-import React, { createContext, ReactNode, useContext } from "react";
-import { Snackbar } from "@material-ui/core";
-import useNotification from "../hooks/notification-hook";
+import React, { createContext, ReactNode, useContext } from 'react';
+import { Snackbar } from '@mui/material';
+import useNotification from '../hooks/notification-hook';
 
 const ctx = createContext({
   snackbar: {},
   notify: (message: any) => {
-    alert("notify");
+    alert('notify');
   },
 });
 
@@ -20,8 +20,8 @@ export function NotificationProvider({ children }: NotificationProviderProps) {
       {children}
       <Snackbar
         anchorOrigin={{
-          vertical: "bottom",
-          horizontal: "left",
+          vertical: 'bottom',
+          horizontal: 'left',
         }}
         autoHideDuration={4000}
         {...hookResult.snackbar}
