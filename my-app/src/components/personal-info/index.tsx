@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   ButtonText,
   Divider,
@@ -8,17 +8,17 @@ import {
   MainButton,
   Name,
   TextContainer,
-} from "./styled";
-import { name, job } from "../../content/section-contact-info";
-import ContactLink from "../../components/contact-link";
-import { contactLinks } from "../../content/section-contact-info";
+} from './styled';
+import { name, job } from '../../content/section-contact-info';
+import ContactLink from '../../components/contact-link';
+import { contactLinks } from '../../content/section-contact-info';
 
-import * as Scroll from "react-scroll";
+import * as Scroll from 'react-scroll';
 
 var scroll = () =>
   Scroll.animateScroll.scrollToBottom({
     duration: 100,
-    smooth: "easeInQuart",
+    smooth: 'easeInQuart',
   });
 
 function PersonalInfo() {

@@ -1,11 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const MyLinkContact = styled.img`
   width: 90px;
   height: 90px;
-  border-radius: 50%;
   transition: 0.1s linear;
-  padding: 0 15px;
+  padding-right: 20px;
 
   @media (max-width: 1220px) {
     width: 60px;

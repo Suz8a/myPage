@@ -12,6 +12,7 @@ export const Divider = styled.div`
 `;
 
 export const InfoContainer = styled.div`
+  grid-area: personalInfo;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
@@ -19,14 +20,13 @@ export const InfoContainer = styled.div`
     'name-job'
     'contact-link'
     'button';
-  grid-area: personalInfo;
   @media (max-width: 1220px) {
     text-align: center;
   }
 `;
 export const TextContainer = styled.div`
-  width: 100%;
   grid-area: name-job;
+  width: 100%;
   margin-bottom: auto;
 `;
 
@@ -56,10 +56,9 @@ export const ButtonText = styled.div`
 `;
 
 export const LinksContainer = styled.div`
-  width: 100%;
   grid-area: contact-link;
+  width: 100%;
   display: flex;
-  margin: 0 -15px;
   @media (min-width: 1221px) {
     margin-top: auto;
   }
@@ -72,21 +71,18 @@ export const LinksContainer = styled.div`
 `;
 
 export const MainButton = styled(Button)`
+  grid-area: button;
   width: 100%;
   height: 100px;
   border-radius: 20px;
   text-transform: none;
   margin-top: auto;
-  grid-area: button;
-
   @media (max-width: 560px) {
     margin-top: 40px;
   }
-
   @media (max-height: 960px) and (min-width: 1220px) {
     height: 90px;
   }
-
   @media (max-width: 1220px) {
     border-radius: 50px;
     height: 60px;
