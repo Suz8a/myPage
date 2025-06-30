@@ -1,172 +1,167 @@
-import styled from 'styled-components';
-import IconCircle from '../../components/icon-circle';
+import { styled } from '@mui/system';
 import { Computer, PhoneAndroid } from '@mui/icons-material';
+import IconCircle from '../../components/icon-circle';
 
-export const ProjectsContainer = styled.div`
-  width: 85%;
-  height: 70vh;
-  max-width: 1280px;
-  min-height: 630px;
-  box-sizing: border-box;
-  background-color: #f5f9ff;
-  border-radius: 20px;
-  position: relative;
-  display: flex;
-  overflow: hidden;
-  padding: 20px;
-  @media (max-width: 1400px) {
-    min-height: 700px;
-  }
-  @media (min-height: 1400px) {
-    max-height: 750px;
-  }
-  @media (max-width: 1220px) {
-    flex-direction: column;
-    padding: 0 0 20px 20px;
-  }
-  @media (max-height: 650px) {
-    margin: 60px 0;
-  }
-`;
+export const ProjectsContainer = styled('div')(({ theme }) => ({
+  width: '85%',
+  height: '70vh',
+  maxWidth: 1280,
+  minHeight: 630,
+  boxSizing: 'border-box',
+  backgroundColor: '#f5f9ff',
+  borderRadius: 20,
+  position: 'relative',
+  display: 'flex',
+  overflow: 'hidden',
+  padding: 20,
+  [theme.breakpoints.down(1400)]: {
+    minHeight: 700,
+  },
+  [theme.breakpoints.up(1400)]: {
+    maxHeight: 750,
+  },
+  [theme.breakpoints.down(1220)]: {
+    flexDirection: 'column',
+    padding: '0 0 20px 20px',
+  },
+  [theme.breakpoints.down(650)]: {
+    margin: '60px 0',
+  },
+}));
 
-export const TopProjectImage = styled.img`
-  width: 450px;
-  height: auto;
-  position: absolute;
-  top: -220px;
-  left: 30px;
-  box-shadow: 0px 2px 10px #b3b3b3;
-  @media (max-width: 1400px) {
-    top: -140px;
-    left: 20px;
-  }
-  @media (max-width: 1220px) {
-    top: -170px;
-    width: 350px;
-    left: 30px;
-  }
-  @media (max-width: 480px) {
-    top: -115px;
-    width: 230px;
-    left: 5px;
-  }
-`;
+export const TopProjectImage = styled('img')(({ theme }) => ({
+  width: 450,
+  height: 'auto',
+  position: 'absolute',
+  top: -220,
+  left: 30,
+  boxShadow: '0px 2px 10px #b3b3b3',
+  [theme.breakpoints.down(1400)]: {
+    top: -140,
+    left: 20,
+  },
+  [theme.breakpoints.down(1220)]: {
+    top: -170,
+    width: 350,
+    left: 30,
+  },
+  [theme.breakpoints.down(480)]: {
+    top: -115,
+    width: 230,
+    left: 5,
+  },
+}));
 
-export const BottomProjectImage = styled.img`
-  width: 600px;
-  height: auto;
-  position: absolute;
-  bottom: -100px;
-  left: 20%;
-  box-shadow: 0px 2px 10px #b3b3b3;
-  @media (max-width: 1400px) {
-    left: 10%;
-    bottom: -40px;
-  }
-  @media (max-width: 1220px) {
-    bottom: -200px;
-    left: 40%;
-  }
-`;
+export const BottomProjectImage = styled('img')(({ theme }) => ({
+  width: 600,
+  height: 'auto',
+  position: 'absolute',
+  bottom: -100,
+  left: '20%',
+  boxShadow: '0px 2px 10px #b3b3b3',
+  [theme.breakpoints.down(1400)]: {
+    left: '10%',
+    bottom: -40,
+  },
+  [theme.breakpoints.down(1220)]: {
+    bottom: -200,
+    left: '40%',
+  },
+}));
 
-export const ProjectsImagesContainer = styled.div`
-  height: 100%;
-  width: 70%;
-  position: relative;
-  @media (max-width: 1220px) {
-    width: 100%;
-    height: 900px;
-    overflow: hidden;
-  }
-  @media (max-width: 480px) {
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
-  }
-`;
+export const ProjectsImagesContainer = styled('div')(({ theme }) => ({
+  height: '100%',
+  width: '70%',
+  position: 'relative',
+  [theme.breakpoints.down(1220)]: {
+    width: '100%',
+    height: 900,
+    overflow: 'hidden',
+  },
+  [theme.breakpoints.down(480)]: {
+    width: '100%',
+    height: 500,
+    overflow: 'hidden',
+  },
+}));
 
-export const TextIconsContainer = styled.div`
-  height: 100%;
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  @media (max-width: 1220px) {
-    align-items: center;
-    text-align: center;
-    width: 100%;
-  }
-`;
+export const TextIconsContainer = styled('div')(({ theme }) => ({
+  height: '100%',
+  width: '30%',
+  display: 'flex',
+  flexDirection: 'column',
+  [theme.breakpoints.down(1220)]: {
+    alignItems: 'center',
+    textAlign: 'center',
+    width: '100%',
+  },
+}));
 
-export const CirclesContainer = styled.div`
-  width: 100%;
-  height: 45%;
-  display: flex;
-  align-items: center;
-  @media (max-width: 1220px) {
-    width: fit-content;
-    margin: 20px -45px 30px 0;
-  }
-  @media (max-width: 1220px) {
-    width: fit-content;
-    margin-bottom: 15px;
-  }
-`;
+export const CirclesContainer = styled('div')(({ theme }) => ({
+  width: '100%',
+  height: '45%',
+  display: 'flex',
+  alignItems: 'center',
+  [theme.breakpoints.down(1220)]: {
+    width: 'fit-content',
+    margin: '20px -45px 30px 0',
+    marginBottom: 15,
+  },
+}));
 
-export const StyledIconCircle = styled(IconCircle)`
-  color: #000000;
-  margin-right: 45px;
-  @media (max-width: 1220px) {
-    width: 120px;
-    height: 120px;
-  }
-  @media (max-width: 480px) {
-    width: 100px;
-    height: 100px;
-  }
-`;
+export const StyledIconCircle = styled(IconCircle)(({ theme }) => ({
+  color: '#000000',
+  marginRight: 45,
+  [theme.breakpoints.down(1220)]: {
+    width: 120,
+    height: 120,
+  },
+  [theme.breakpoints.down(480)]: {
+    width: 100,
+    height: 100,
+  },
+}));
 
-export const StyledPhoneIcon = styled(PhoneAndroid)`
-  width: 55px;
-  height: auto;
-  color: #3d7394;
-`;
+export const StyledPhoneIcon = styled(PhoneAndroid)({
+  width: 55,
+  height: 'auto',
+  color: '#3d7394',
+});
 
-export const StyledLaptopIcon = styled(Computer)`
-  width: 55px;
-  height: auto;
-  color: #3d7394;
-`;
+export const StyledLaptopIcon = styled(Computer)({
+  width: 55,
+  height: 'auto',
+  color: '#3d7394',
+});
 
-export const ProjectsTitle = styled.div`
-  width: 100%;
-  font-size: 30px;
-  font-weight: 500;
-  color: #000000;
-  transition: 0.5s;
-  @media (max-width: 480px) {
-    font-size: 20px;
-  }
-`;
+export const ProjectsTitle = styled('div')(({ theme }) => ({
+  width: '100%',
+  fontSize: 30,
+  fontWeight: 500,
+  color: '#000000',
+  transition: '0.5s',
+  [theme.breakpoints.down(480)]: {
+    fontSize: 20,
+  },
+}));
 
-export const ProjectsLink = styled.a`
-  width: fit-content;
-  height: 40px;
-  font-size: 32px;
-  color: #000000;
-  font-weight: 300;
-  margin-top: 30px;
-  text-decoration: none;
-  border-bottom: 2px solid #000000;
-  transition: 0.5s;
-
-  &:hover {
-    color: hsl(0, 0%, 40%);
-    border-bottom: 2px solid hsl(0, 0%, 40%);
-  }
-
-  @media (max-width: 480px) {
-    font-size: 25px;
-    border-bottom: 1px solid #000000;
-    margin-top: 20px;
-  }
-`;
+export const ProjectsLink = styled('a')(({ theme }) => ({
+  width: 'fit-content',
+  height: 40,
+  fontSize: 32,
+  color: '#000000',
+  fontWeight: 300,
+  marginTop: 30,
+  textDecoration: 'none',
+  borderBottom: '2px solid #000000',
+  transition: '0.5s',
+  '&:hover': {
+    color: 'hsl(0, 0%, 40%)',
+    borderBottom: '2px solid hsl(0, 0%, 40%)',
+  },
+  [theme.breakpoints.down(480)]: {
+    fontSize: 25,
+    borderBottom: '1px solid #000000',
+    marginTop: 20,
+  },
+}));

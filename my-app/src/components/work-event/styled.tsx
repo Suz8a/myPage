@@ -1,122 +1,126 @@
-import styled from "styled-components";
-import { workExperienceColor } from "../../theme";
+import { styled } from '@mui/system';
+import { workExperienceColor } from '../../theme';
 
 type EventProps = {
   moveToBottom?: boolean;
   showSquarePoint?: boolean;
 };
 
-export const Label = styled.div`
-  width: 100%;
-  height: 0;
-  border-top: 50px solid ${workExperienceColor};
-  border-right: 50px solid transparent;
-`;
+export const Label = styled('div')({
+  width: '100%',
+  height: 0,
+  borderTop: `50px solid ${workExperienceColor}`,
+  borderRight: '50px solid transparent',
+});
 
-export const LabelTitle = styled.div`
-  width: 100%;
-  text-align: left;
-  position: absolute;
-  top: 15px;
-  left: 20px;
-  font-size: 20px;
-  color: #ffffff;
-  font-weight: 600;
-`;
+export const LabelTitle = styled('div')({
+  width: '100%',
+  textAlign: 'left',
+  position: 'absolute',
+  top: 15,
+  left: 20,
+  fontSize: 20,
+  color: '#ffffff',
+  fontWeight: 600,
+});
 
-export const LabelContainer = styled.div`
-  width: 220px;
-  position: relative;
-  @media (max-width: 400px) {
-    width: 160px;
-  }
-`;
+export const LabelContainer = styled('div')(({ theme }) => ({
+  width: 220,
+  position: 'relative',
+  [theme.breakpoints.down(400)]: {
+    width: 160,
+  },
+}));
 
-export const EventContainer = styled.div<EventProps>`
-  width: 360px;
-  height: 350px;
-  position: relative;
-  @media (min-width: 1400px) {
-    ${({ moveToBottom }) =>
-      moveToBottom ? "margin-top:auto" : "padding-top: 15px;"}
-  }
-  @media (max-width: 1400px) {
-    width: 360px;
-    height: 400px;
-    margin: 15px 0;
-  }
-  @media (max-width: 400px) {
-    width: 90%;
-    height: 400px;
-    margin: 15px 0;
-  }
-`;
+export const EventContainer = styled('div', {
+  shouldForwardProp: (prop) => prop !== 'moveToBottom',
+})<EventProps>(({ theme, moveToBottom }) => ({
+  width: 360,
+  height: 350,
+  position: 'relative',
+  [theme.breakpoints.up(1400)]: {
+    ...(moveToBottom ? { marginTop: 'auto' } : { paddingTop: 15 }),
+  },
+  [theme.breakpoints.down(1400)]: {
+    width: 360,
+    height: 400,
+    margin: '15px 0',
+  },
+  [theme.breakpoints.down(400)]: {
+    width: '90%',
+    height: 400,
+    margin: '15px 0',
+  },
+}));
 
-export const Title = styled.div`
-  width: 300px;
-  height: 35px;
-  text-align: left;
-  color: #000000;
-  font-size: 25px;
-  margin: 10px 0 10px 0;
-  font-weight: 500;
-  @media (max-width: 880px) {
-    width: 100%;
-    height: fit-content;
-  }
-`;
+export const Title = styled('div')(({ theme }) => ({
+  width: 300,
+  height: 35,
+  textAlign: 'left',
+  color: '#000000',
+  fontSize: 25,
+  margin: '10px 0 10px 0',
+  fontWeight: 500,
+  [theme.breakpoints.down(880)]: {
+    width: '100%',
+    height: 'fit-content',
+  },
+}));
 
-export const Description = styled.div`
-  width: 100%;
-  height: 100%;
-  color: #545454;
-  font-size: 20px;
-`;
+export const Description = styled('div')({
+  width: '100%',
+  height: '100%',
+  color: '#545454',
+  fontSize: 20,
+});
 
-export const InfoContainer = styled.div`
-  width: 85%;
-  height: 100%;
-  display: flex;
-  margin-left: auto;
-  flex-direction: column;
-`;
+export const InfoContainer = styled('div')({
+  width: '85%',
+  height: '100%',
+  display: 'flex',
+  marginLeft: 'auto',
+  flexDirection: 'column',
+});
 
-export const SquarePoint = styled.div<EventProps>`
-  width: 65px;
-  height: 65px;
-  background-color: ${workExperienceColor};
-  border-radius: 25px;
-  position: absolute;
-  left: 0;
-  @media (min-width: 1400px) {
-    ${({ moveToBottom }) => (moveToBottom ? "top:0;" : "bottom:0;")}
-  }
+export const SquarePoint = styled('div', {
+  shouldForwardProp: (prop) =>
+    prop !== 'moveToBottom' && prop !== 'showSquarePoint',
+})<EventProps>(({ theme, moveToBottom, showSquarePoint }) => ({
+  width: 65,
+  height: 65,
+  backgroundColor: workExperienceColor,
+  borderRadius: 25,
+  position: 'absolute',
+  left: 0,
+  [theme.breakpoints.up(1400)]: {
+    ...(moveToBottom ? { top: 0 } : { bottom: 0 }),
+  },
+  [theme.breakpoints.down(1400)]: {
+    bottom: 0,
+    width: 40,
+    height: 40,
+    borderRadius: 10,
+    left: 10,
+    ...(showSquarePoint === false ? { display: 'none' } : {}),
+  },
+}));
 
-  @media (max-width: 1400px) {
-    bottom: 0;
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    left: 10px;
-    ${({ showSquarePoint }) => (!showSquarePoint ? "display:none;" : "")}
-  }
-`;
+export const LineTextContainer = styled('div', {
+  shouldForwardProp: (prop) => prop !== 'moveToBottom',
+})<EventProps>(({ theme, moveToBottom }) => ({
+  width: '100%',
+  height: '70%',
+  display: 'flex',
+  [theme.breakpoints.up(1400)]: {
+    ...(moveToBottom ? { position: 'absolute', bottom: 0 } : { top: 0 }),
+  },
+  [theme.breakpoints.down(1400)]: {
+    top: 0,
+    height: '80%',
+  },
+}));
 
-export const LineTextContainer = styled.div<EventProps>`
-  width: 100%;
-  height: 70%;
-  display: flex;
-  @media (min-width: 1400px) {
-    ${({ moveToBottom }) =>
-      moveToBottom ? "position:absolute; bottom:0;" : "top:0;"}
-  }
-  @media (max-width: 1400px) {
-    top: 0;
-    height: 80%;
-  }
-`;
-
-export const LineContainer = styled.div`
-  height: 100%;
-  width: 20%;
-`;
+export const LineContainer = styled('div')({
+  height: '100%',
+  width: '20%',
+});

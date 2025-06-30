@@ -1,35 +1,36 @@
-import styled, { keyframes } from "styled-components";
+import { styled, keyframes } from '@mui/system';
 
 const opacityMoving = keyframes`
-0%{
-opacity:0;
-transform: translate(100px)
-}
-100%{
-opacity:1
-}
+  0% {
+    opacity: 0;
+    transform: translate(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
 `;
 
 const opacity = keyframes`
-0%{
-opacity:0;
-}
-100%{
-opacity:1
-}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 `;
 
-export const MyImage = styled.img`
-  width: auto;
-  height: 100%;
-  border-radius: 50%;
-  margin: auto 0 auto auto;
-  grid-area: profileImage;
-  @media (min-width: 1221px) {
-    animation: ${opacityMoving} 1s forwards;
-  }
-  @media (max-width: 1220px) {
-    animation: ${opacity} 1s forwards;
-    margin: auto;
-  }
-`;
+export const MyImage = styled('img')(({ theme }) => ({
+  width: 'auto',
+  height: '100%',
+  borderRadius: '50%',
+  margin: 'auto 0 auto auto',
+  gridArea: 'profileImage',
+  [theme.breakpoints.up(1221)]: {
+    animation: `${opacityMoving} 1s forwards`,
+  },
+  [theme.breakpoints.down(1220)]: {
+    animation: `${opacity} 1s forwards`,
+    margin: 'auto',
+  },
+}));

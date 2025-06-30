@@ -1,29 +1,30 @@
-import styled from "styled-components";
+import { styled } from '@mui/system';
 
-export const ContactSectionGrid = styled.div`
-  display: grid;
-  width: 100%;
-  height: 100%;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-template-areas:
+export const ContactSectionGrid = styled('div')(({ theme }) => ({
+  display: 'grid',
+  width: '100%',
+  height: '100%',
+  gridTemplateColumns: 'repeat(4, 1fr)',
+  gridTemplateRows: 'repeat(5, 1fr)',
+  gridTemplateAreas: `
     "top top top top"
-    "personalInfo personalInfo profileImage profileImage "
     "personalInfo personalInfo profileImage profileImage"
-    "personalInfo personalInfo profileImage profileImage "
-    "bottom bottom bottom bottom  ";
-
-  @media (max-width: 1220px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
-    grid-template-areas:
+    "personalInfo personalInfo profileImage profileImage"
+    "personalInfo personalInfo profileImage profileImage"
+    "bottom bottom bottom bottom"
+  `,
+  transition: 'all 0.2s linear',
+  [theme.breakpoints.down(1220)]: {
+    gridTemplateColumns: '1fr',
+    gridTemplateRows: 'repeat(6, 1fr)',
+    gridTemplateAreas: `
       "profileImage"
       "profileImage"
       "personalInfo"
       "personalInfo"
       "personalInfo"
-      "bottom";
-    grid-gap: 40px;
-  }
-  transition: linear;
-`;
+      "bottom"
+    `,
+    gridGap: '40px',
+  },
+}));
