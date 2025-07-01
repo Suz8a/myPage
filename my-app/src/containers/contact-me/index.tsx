@@ -1,19 +1,10 @@
 import React, { useState } from 'react';
-import {
-  MyStyledSection,
-  Trapezoid,
-  TextIconContainer,
-  FormTextContainer,
-  FormContainer,
-  Title,
-  Message,
-  MailIcon,
-} from './styled';
+import { MyStyledSection, Title, Message, MailIcon } from './styled';
 import Form from '../../components/form';
 import mail from '../../assets/mail.png';
 import { addMessage } from '../../services/firebase';
 import { MessageInfo } from '../../types';
-import { Snackbar, Alert as MuiAlert, AlertProps } from '@mui/material';
+import { Snackbar, Alert as MuiAlert, AlertProps, Stack } from '@mui/material';
 
 type AlertMessageColor = NonNullable<AlertProps['color']>;
 
@@ -33,6 +24,7 @@ function Alert(props: AlertProps) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
 
+// TODO: Make it mobile friendly
 function ContactMe({ className, id }: ContactMeProps) {
   const [open, setOpen] = useState(false);
   const [alertSeverity, setAlertSeverity] =
@@ -61,22 +53,26 @@ function ContactMe({ className, id }: ContactMeProps) {
       message,
       showIncompleteInfoMessage,
       showSuccessMessage,
-      showErrorMessage
+      showErrorMessage,
     );
   }
   return (
     <MyStyledSection className={className} id={id}>
-      <Trapezoid />
-      <FormTextContainer>
-        <TextIconContainer>
+      <Stack
+        spacing={2}
+        direction={{
+          xs: 'column',
+          md: 'row',
+        }}
+        justifyContent="space-between"
+      >
+        <Stack spacing={2} width="100%" maxWidth={'50%'}>
           <Title>Contact Me</Title>
-          <Message>I will talk to you as soon as posible</Message>
+          <Message>I will talk to you as soon as possible</Message>
           <MailIcon src={mail} />
-        </TextIconContainer>
-        <FormContainer>
-          <Form onClick={onClick} />
-        </FormContainer>
-      </FormTextContainer>
+        </Stack>
+        <Form onClick={onClick} />
+      </Stack>
       <Snackbar open={open} autoHideDuration={6000} onClick={handleClose}>
         <Alert onClose={handleClose} severity={alertSeverity}>
           {ALERT_MESSAGE[alertSeverity]}

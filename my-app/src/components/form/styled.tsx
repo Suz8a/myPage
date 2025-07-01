@@ -6,17 +6,6 @@ type ValidationProps = {
   validation: boolean;
 };
 
-export const FormContainer = styled('div')(({ theme }) => ({
-  width: '100%',
-  height: '100%',
-  position: 'relative',
-  display: 'flex',
-  flexDirection: 'column',
-  [theme.breakpoints.down(880)]: {
-    margin: '10px 0',
-  },
-}));
-
 export const StyledBigTextField = styled('textarea', {
   shouldForwardProp: (prop) => prop !== 'validation',
 })<ValidationProps>(({ validation }) => ({
@@ -25,11 +14,11 @@ export const StyledBigTextField = styled('textarea', {
   padding: 15,
   boxSizing: 'border-box',
   width: '100%',
-  borderRadius: 40,
+  borderRadius: 15,
   textAlign: 'left',
   position: 'relative',
   backgroundColor: '#ffffff',
-  fontSize: 25,
+  fontSize: 20,
   fontFamily: 'roboto',
   resize: 'none',
   border: validation ? '1px solid #FF0000' : '1px solid #a3a3a3',
@@ -47,22 +36,11 @@ export const StyledTextField = styled(TextField, {
 export const MainButton = styled(Button)(({ theme }) => ({
   width: '100%',
   height: 70,
-  borderRadius: 10,
+  borderRadius: 35,
   textTransform: 'none',
   alignSelf: 'flex-end',
+  fontSize: 25,
   [theme.breakpoints.down(880)]: {
     height: 50,
-  },
-}));
-
-export const ButtonText = styled('div')(({ theme }) => ({
-  fontSize: 50,
-  fontWeight: 500,
-  transition: '0.5s',
-  [theme.breakpoints.down(1400)]: {
-    fontSize: 40,
-  },
-  [theme.breakpoints.down(1220)]: {
-    fontSize: 30,
   },
 }));

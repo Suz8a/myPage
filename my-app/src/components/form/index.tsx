@@ -1,23 +1,18 @@
-import React from "react";
-import {
-  FormContainer,
-  StyledTextField,
-  StyledBigTextField,
-  MainButton,
-  ButtonText,
-} from "./styled";
-import { useState } from "react";
-import { MessageInfo } from "../../types";
+import React from 'react';
+import { StyledTextField, StyledBigTextField, MainButton } from './styled';
+import { useState } from 'react';
+import { MessageInfo } from '../../types';
+import { Stack } from '@mui/material';
 
 type FormProps = {
   onClick: (message: MessageInfo | boolean) => void;
 };
 
 function Form({ onClick }: FormProps) {
-  const [name, setName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [name, setName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
 
   //validations
   const [showErrors, setShowErrors] = useState(false);
@@ -25,24 +20,24 @@ function Form({ onClick }: FormProps) {
   function handleName(e: React.ChangeEvent<HTMLInputElement>) {
     setName(e.target.value);
   }
-  function handleLastName(e: React.ChangeEvent<HTMLInputElement>) {
-    setLastName(e.target.value);
-  }
+
   function handleEmail(e: React.ChangeEvent<HTMLInputElement>) {
     setEmail(e.target.value);
   }
+
   function handleMessage(e: React.ChangeEvent<HTMLTextAreaElement>) {
     setMessage(e.target.value);
   }
 
   //validators
   function emptyText(text: string) {
-    return text.trim() === "";
+    return text.trim() === '';
   }
 
   function emailValidation(email: string) {
-    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return email.trim() === "" || !re.test(email.toLowerCase());
+    const re =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return email.trim() === '' || !re.test(email.toLowerCase());
   }
 
   function checkErrors() {
@@ -50,7 +45,7 @@ function Form({ onClick }: FormProps) {
       emptyText(name) ||
         emptyText(lastName) ||
         emailValidation(email) ||
-        emptyText(message)
+        emptyText(message),
     );
   }
 
@@ -66,35 +61,36 @@ function Form({ onClick }: FormProps) {
       return true;
 
     var info = { name, lastName, email, message };
-    setName("");
-    setLastName("");
-    setEmail("");
-    setMessage("");
+    setName('');
+    setLastName('');
+    setEmail('');
+    setMessage('');
     return info;
   }
 
   return (
-    <FormContainer>
+    <Stack spacing={2} width="100%" maxWidth="45%">
       <StyledTextField
+        label="First Name"
         placeholder="First Name"
         onChange={handleName}
         value={name}
         validation={emptyText(name) && showErrors}
-      />
-      <StyledTextField
-        placeholder="Last Name"
-        onChange={handleLastName}
-        value={lastName}
-        validation={emptyText(lastName) && showErrors}
+        required
       />
       <StyledTextField
         type="email"
+        label="Email"
         placeholder="What's your email"
         onChange={handleEmail}
         value={email}
         validation={emailValidation(email) && showErrors}
+        required
       />
+
+      <label htmlFor="lastName">Last Name *</label>
       <StyledBigTextField
+        id="lastName"
         placeholder="Your message..."
         onChange={handleMessage}
         value={message}
@@ -107,9 +103,9 @@ function Form({ onClick }: FormProps) {
         variant="contained"
         color="primary"
       >
-        <ButtonText>Send Message</ButtonText>
+        Send Message
       </MainButton>
-    </FormContainer>
+    </Stack>
   );
 }
 

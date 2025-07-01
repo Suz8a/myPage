@@ -1,33 +1,12 @@
 import { styled } from '@mui/system';
 
-// TODO: Migrate to MUI v7 styling system
 type LabelProps = {
   text: string;
 };
 
-const circleResponsiveSize = {
-  width: '200px',
-  height: '200px',
-  '@media (max-width:1220px)': {
-    width: '170px',
-    height: '170px',
-  },
-  '@media (max-width:920px)': {
-    width: '150px',
-    height: '150px',
-  },
-  '@media (max-width:630px)': {
-    width: '130px',
-    height: '130px',
-  },
-  '@media (max-width:560px)': {
-    width: '110px',
-    height: '110px',
-  },
-};
-
 export const Circle = styled('img')(({ theme }) => ({
-  ...circleResponsiveSize,
+  width: '100%',
+  height: '100%',
   borderRadius: '50%',
   boxShadow: '0px 0px 10px #a8a8a8',
   position: 'absolute',
@@ -41,14 +20,30 @@ export const Circle = styled('img')(({ theme }) => ({
 }));
 
 export const CircleLabel = styled('div')(({ theme }) => ({
-  ...circleResponsiveSize,
+  width: '200px',
+  height: '200px',
   borderRadius: '50%',
-  backgroundColor: 'rgb(0, 0, 0)',
   margin: '30px',
   position: 'relative',
   transition: '0.35s',
-  '@media (max-width:920px)': {
-    margin: '20px',
+  '&:hover': {
+    backgroundColor: 'rgb(0, 0, 0)',
+  },
+  [theme.breakpoints.down(1220)]: {
+    width: '170px',
+    height: '170px',
+  },
+  [theme.breakpoints.down(920)]: {
+    width: '150px',
+    height: '150px',
+  },
+  [theme.breakpoints.down(630)]: {
+    width: '130px',
+    height: '130px',
+  },
+  [theme.breakpoints.down(560)]: {
+    width: '110px',
+    height: '110px',
   },
 }));
 

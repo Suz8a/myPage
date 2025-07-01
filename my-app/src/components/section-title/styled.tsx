@@ -1,8 +1,7 @@
-import styled from 'styled-components';
+import { styled } from '@mui/system';
 import { Typography } from '@mui/material';
 
-export const Title = styled(Typography)`
-  margin: 30px auto;
-  color: #000000;
-  margin: 30px 0;
-`;
+export const Title = styled(Typography)({
+  margin: '30px 0',
+  color: '#000000',
+});
